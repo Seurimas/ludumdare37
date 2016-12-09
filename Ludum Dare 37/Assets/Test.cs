@@ -10,7 +10,7 @@ public class Test : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float x = Input.GetAxis("Horizontal");
+        float x = (Input.GetAxis("Horizontal")*100);
         float y = Input.GetAxis("Vertical");
         transform.position += new Vector3(x, y) * Time.deltaTime * speed;
 	}

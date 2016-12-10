@@ -247,6 +247,11 @@ Prefab:
       propertyPath: m_Name
       value: Door Left
       objectReference: {fileID: 0}
+    - target: {fileID: 61380111862792198, guid: 18c19e64e88aae247b204bca735c3058,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18c19e64e88aae247b204bca735c3058, type: 2}
   m_IsPrefabParent: 0
@@ -900,6 +905,11 @@ Prefab:
       propertyPath: m_Name
       value: Door Mid
       objectReference: {fileID: 0}
+    - target: {fileID: 61380111862792198, guid: 18c19e64e88aae247b204bca735c3058,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18c19e64e88aae247b204bca735c3058, type: 2}
   m_IsPrefabParent: 0
@@ -968,6 +978,11 @@ Prefab:
     - target: {fileID: 1676721790782658, guid: 18c19e64e88aae247b204bca735c3058, type: 2}
       propertyPath: m_Name
       value: Door Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 61380111862792198, guid: 18c19e64e88aae247b204bca735c3058,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18c19e64e88aae247b204bca735c3058, type: 2}
@@ -1192,6 +1207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1158080160}
   - component: {fileID: 1158080161}
+  - component: {fileID: 1158080162}
   m_Layer: 0
   m_Name: RaisedLeft
   m_TagString: Untagged
@@ -1233,6 +1249,26 @@ EdgeCollider2D:
   - {x: -6.0076184, y: 13.96366}
   - {x: -3.9335248, y: 14.11377}
   - {x: -3.9377997, y: 15.003219}
+--- !u!50 &1158080162
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158080159}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1184463323
 GameObject:
   m_ObjectHideFlags: 0

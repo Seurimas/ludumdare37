@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da57f1373e98524b8e566419227ace1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adventurerManager: {fileID: 0}
 --- !u!114 &114903516708084206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,3 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48251a3e19c4e948bef39795007cc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adventurerPrefabs:
+  - {fileID: 1846019831061736, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
+  doors: []
+  loots: []

@@ -36,7 +36,6 @@ public class AdventurerMovementController : MonoBehaviour {
 
     internal void advanceTowards(Vector3 position)
     {
-        Debug.Log(String.Format("Advancing towards {0}", position));
         targetPosition = position;
         nextWaypoint = null;
     }

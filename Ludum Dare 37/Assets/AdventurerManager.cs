@@ -38,5 +38,6 @@ public class AdventurerManager : MonoBehaviour {
         GameObject prefab = adventurerPrefabs[Random.Range(0, adventurerPrefabs.Count)];
         GameObject adventurer = Instantiate(prefab, spawnLocation, new Quaternion());
         adventurer.GetComponent<AdventurerStateController>().initialize(door, loot);
+        adventurer.GetComponent<SpriteRenderer>().sprite = adventurer.GetComponent<AdventurerSpriteSet>().getRandomSprite();
     }
 }

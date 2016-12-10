@@ -37,10 +37,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4393947408339300}
   - component: {fileID: 212213955859027896}
-  - component: {fileID: 61432343301163854}
   - component: {fileID: 114994536185691510}
   - component: {fileID: 114378189105134574}
   - component: {fileID: 50344625850026028}
+  - component: {fileID: 114337100420475384}
+  - component: {fileID: 58591299861693190}
+  - component: {fileID: 114441547125531076}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Enemy
@@ -95,8 +97,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61432343301163854
-BoxCollider2D:
+--- !u!58 &58591299861693190
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -108,7 +110,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Radius: 0.4
 --- !u!61 &61614430331164202
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -123,6 +125,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 8}
+--- !u!114 &114337100420475384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1265558a9da9d0b409c0b7403054a750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300002, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300004, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300006, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300008, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300010, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
 --- !u!114 &114378189105134574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +154,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &114441547125531076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd84c5298bce9324b8247b9f6783dc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 2
 --- !u!114 &114994536185691510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
-  currentWaypoint: {fileID: 0}
   loot: {fileID: 0}
   cashoutValue: 2
 --- !u!114 &114995990921414024
@@ -192,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

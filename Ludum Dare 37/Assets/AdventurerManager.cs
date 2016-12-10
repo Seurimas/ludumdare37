@@ -25,17 +25,18 @@ public class AdventurerManager : MonoBehaviour {
 
     private void spawnAdventurerGroup(GameObject door, GameObject loot, int groupSize)
     {
-        Transform spawnLocation = door.transform;
+        Vector3 spawnLocation = door.transform.position;
         for (int i = 0;i < groupSize;i++)
         {
             spawnAdventurer(door, loot, spawnLocation);
+            spawnLocation = spawnLocation + new Vector3(0, -1, 0);
         }
     }
 
-    private void spawnAdventurer(GameObject door, GameObject loot, Transform spawnLocation)
+    private void spawnAdventurer(GameObject door, GameObject loot, Vector3 spawnLocation)
     {
         GameObject prefab = adventurerPrefabs[Random.Range(0, adventurerPrefabs.Count)];
-        GameObject adventurer = Instantiate(prefab, spawnLocation.position, new Quaternion());
-        adventurer.GetComponent<AdventurerController>().initialize(door, loot);
+        GameObject adventurer = Instantiate(prefab, spawnLocation, new Quaternion());
+        adventurer.GetComponent<AdventurerStateController>().initialize(door, loot);
     }
 }

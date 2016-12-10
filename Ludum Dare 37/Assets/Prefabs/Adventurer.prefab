@@ -39,6 +39,8 @@ GameObject:
   - component: {fileID: 212213955859027896}
   - component: {fileID: 61432343301163854}
   - component: {fileID: 114994536185691510}
+  - component: {fileID: 114378189105134574}
+  - component: {fileID: 50344625850026028}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Enemy
@@ -73,6 +75,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50344625850026028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &61432343301163854
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -101,6 +123,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 8}
+--- !u!114 &114378189105134574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4148b9aae9dd44e80380c17abefc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &114994536185691510
 MonoBehaviour:
   m_ObjectHideFlags: 1

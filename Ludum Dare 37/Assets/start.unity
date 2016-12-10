@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143400253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.472816, y: -13.03434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184463324}
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -1.4728155, y: -13.034337}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5.068186, y: 4.000456}
 --- !u!114 &143400256
@@ -355,6 +355,7 @@ MonoBehaviour:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
   - {fileID: 1576069657}
+  - {fileID: 143400256}
 --- !u!4 &435616682
 Transform:
   m_ObjectHideFlags: 0
@@ -619,7 +620,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 481950042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.84272, y: -3.509754, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184463324}
@@ -636,7 +637,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 13.84272, y: -3.5097537}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.2452545, y: 5.0062456}
 --- !u!114 &481950045
@@ -935,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentWaypoints:
-  - {fileID: 0}
+  - {fileID: 1878805864}
 --- !u!1001 &926775412
 Prefab:
   m_ObjectHideFlags: 0
@@ -1009,7 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentWaypoints:
-  - {fileID: 0}
+  - {fileID: 351015566}
 --- !u!1001 &931617138
 Prefab:
   m_ObjectHideFlags: 0
@@ -1061,48 +1062,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4102389618051996, guid: 3208eb7105c282e459a6b5bd9895d2b8,
     type: 2}
   m_PrefabInternal: {fileID: 931617138}
---- !u!1001 &1006855173
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.9031508
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.04673019
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393947408339300, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1061626865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,7 +1377,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364205378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -13.96908, y: -6.572862, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184463324}
@@ -1435,7 +1394,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -13.96908, y: -6.572862}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.1538343, y: 5.1586313}
 --- !u!114 &1364205381
@@ -1667,7 +1626,7 @@ MonoBehaviour:
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 481950045}
-  - {fileID: 0}
+  - {fileID: 351015566}
 --- !u!4 &1562728225
 Transform:
   m_ObjectHideFlags: 0
@@ -1712,6 +1671,7 @@ MonoBehaviour:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
   - {fileID: 435616681}
+  - {fileID: 1364205381}
 --- !u!4 &1576069658
 Transform:
   m_ObjectHideFlags: 0

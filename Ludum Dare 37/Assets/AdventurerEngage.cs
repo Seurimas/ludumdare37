@@ -18,7 +18,7 @@ public class AdventurerEngage : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            gameObject.GetComponentInParent<AdventurerController>().aggroPlayer(coll.gameObject);
+            gameObject.GetComponentInParent<AdventurerStateController>().aggroPlayer(coll.gameObject);
         }
     }
 }

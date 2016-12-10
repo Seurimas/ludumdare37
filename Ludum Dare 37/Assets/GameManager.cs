@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour {
         adventurerManager = GetComponent<AdventurerManager>();
     }
 	void Start () {
-		
-	}
-	
+
+        adventurerManager.spawnRandomAdventurerGroup();
+    }
+    bool spawned = false;
 	// Update is called once per frame
 	void Update () {
-		
 	}
 }

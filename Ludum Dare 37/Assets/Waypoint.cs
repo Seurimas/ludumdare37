@@ -14,18 +14,17 @@ public class Waypoint : MonoBehaviour {
     private void calculatePaths()
     {
         List<Waypoint> unvisited = new List<Waypoint>();
-        Dictionary<Waypoint, Waypoint> visitedPath = new Dictionary<Waypoint, Waypoint>();
         unvisited.AddRange(adjacentWaypoints);
         foreach (Waypoint near in adjacentWaypoints)
         {
-            visitedPath[near] = near;
+            transitionWaypoint[near] = near;
         }
         while (unvisited.Count > 0)
         {
             List<Waypoint> nextPaths = new List<Waypoint>(unvisited);
             foreach (Waypoint next in nextPaths)
             {
-                explore(next, unvisited, visitedPath);
+                explore(next, unvisited, transitionWaypoint);
             }
         }
     }

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdventurerController : MonoBehaviour {
-    private enum STATE
+public class AdventurerStateController : MonoBehaviour {
+    public enum STATE
     {
         SPAWNED,
         ADVANCING,
@@ -14,27 +14,46 @@ public class AdventurerController : MonoBehaviour {
         HEALING,
         FLANKING
     };
-    private STATE state;
+    public STATE state { get; private set; }
     public Waypoint door;
     public Waypoint currentWaypoint;
     private Waypoint targetWaypoint;
-    private GameObject target;
+    private GameObject aggro;
 
     public Waypoint loot;
     public float cashoutValue = 2f;
     private float goldEarned = 0;
-	// Use this for initialization
-	void Start () {
+    private AdventurerMovementController legs;
+    // Use this for initialization
+    void Start () {
         state = STATE.SPAWNED;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        legs = GetComponent<AdventurerMovementController>();
+    }
+
+    internal void OnReachWaypoint(Waypoint reached)
+    {
+        Debug.Log(String.Format("{0} reached {1}", this, reached));
+        currentWaypoint = reached;
+        if (reached == targetWaypoint)
+        {
+            switch (state)
+            {
+
+            }
+        } else
+        {
+            move();
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		switch (state)
         {
             case STATE.SPAWNED:
                 state = STATE.ADVANCING;
                 targetWaypoint = loot;
+                move();
                 break;
             case STATE.LOOTING:
                 lootForFrame();
@@ -47,11 +66,16 @@ public class AdventurerController : MonoBehaviour {
         }
 	}
 
+    private void move()
+    {
+        legs.moveTo(currentWaypoint.getNextWaypointTo(targetWaypoint));
+    }
+
     internal void initialize(GameObject door, GameObject loot)
     {
         this.door = door.GetComponent<Waypoint>();
+        this.loot = loot.GetComponent<Waypoint>();
         currentWaypoint = this.door;
-        targetWaypoint = loot.GetComponent<Waypoint>();
     }
 
     private void lootForFrame()
@@ -67,7 +91,7 @@ public class AdventurerController : MonoBehaviour {
             case STATE.ADVANCING:
             case STATE.LOOTING:
                 state = STATE.ATTACKING;
-                target = gameObject;
+                aggro = gameObject;
                 break;
         }
     }

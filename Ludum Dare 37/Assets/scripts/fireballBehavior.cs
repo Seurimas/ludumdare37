@@ -28,8 +28,12 @@ public class fireballBehavior : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        string name = collision.gameObject.name;
+        if (name != "bahamut"){
+            Destroy(gameObject);
+        }
+        
     }
 }

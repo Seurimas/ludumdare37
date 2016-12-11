@@ -33,7 +33,10 @@ public class fireballBehavior : MonoBehaviour {
         string name = collision.gameObject.name;
         if (name != "bahamut"){
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
+
+
         
     }
 }

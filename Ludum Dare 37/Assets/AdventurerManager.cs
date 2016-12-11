@@ -1,25 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class AdventurerManager : MonoBehaviour {
     public List<GameObject> adventurerPrefabs;
-    public List<GameObject> doors;
-    public List<GameObject> loots;
+    private List<GameObject> doors;
+    private List<GameObject> loots;
+    private Text timerText, currentText;
+    private string timerFormat, currentFormat;
     public void initialize(List<GameObject> doors, List<GameObject> loots)
     {
         this.doors = doors;
         this.loots = loots;
     }
+    public void initializeGUI(Text timerText, Text currentText)
+    {
+        this.timerText = timerText;
+        this.currentText = currentText;
+        timerFormat = timerText.text;
+        currentFormat = currentText.text;
+    }
     // Use this for initialization
     void Start () {
 		
 	}
-	
+    public float waveGap = 5f;
+    private float waveProgress = 0;
 	// Update is called once per frame
 	void Update () {
-		
+        int adventurersLeft = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        if (adventurersLeft > 0)
+        {
+            waveProgress = 0;
+            timerText.text = "";
+            currentText.text = string.Format(currentFormat, adventurersLeft);
+        } else
+        {
+            waveProgress += Time.deltaTime;
+            if (waveProgress > waveGap)
+            {
+                spawnRandomAdventurerGroup();
+            }
+            timerText.text = string.Format(timerFormat, (int)(waveGap - waveProgress));
+            currentText.text = "";
+        }
 	}
 
     public void spawnRandomAdventurerGroup()
@@ -44,4 +69,5 @@ public class AdventurerManager : MonoBehaviour {
         adventurer.GetComponent<AdventurerStateController>().initialize(door, loot);
         adventurer.GetComponent<SpriteRenderer>().sprite = adventurer.GetComponent<AdventurerSpriteSet>().getRandomSprite();
     }
+
 }

@@ -74,7 +74,6 @@ public class Waypoint : MonoBehaviour {
                 nearest = waypoint;
             }
         }
-        Debug.Log(nearest);
         return nearest;
     }
 }

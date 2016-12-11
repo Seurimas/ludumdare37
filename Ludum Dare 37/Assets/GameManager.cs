@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public AdventurerManager adventurerManager;
+    public ResourceManager resourceManager;
     
 	// Use this for initialization
 
@@ -16,10 +17,9 @@ public class GameManager : MonoBehaviour {
             DestroyObject(this);
         DontDestroyOnLoad(this);
         adventurerManager = GetComponent<AdventurerManager>();
+        resourceManager = GetComponent<ResourceManager>();
     }
 	void Start () {
-
-        adventurerManager.spawnRandomAdventurerGroup();
     }
     bool spawned = false;
 	// Update is called once per frame

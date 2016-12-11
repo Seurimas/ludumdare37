@@ -10,9 +10,7 @@ public class fireballBehavior : MonoBehaviour {
     
     // Use this for initialization
     void Start () {
-        rotate_sprite();
-        //Destroy after 1 secs
-        Destroy(gameObject,1.0f);
+        //rotate_sprite();
     }
 
     // Update is called once per frame
@@ -49,7 +47,7 @@ public class fireballBehavior : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map")

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114728795545718488}
   - component: {fileID: 58501558003575258}
   - component: {fileID: 114108084801436786}
+  - component: {fileID: 114720093166600620}
   m_Layer: 0
   m_Name: Dwarf
   m_TagString: Enemy
@@ -136,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd84c5298bce9324b8247b9f6783dc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 5
+  mind: {fileID: 0}
+  legs: {fileID: 0}
 --- !u!114 &114363341128543076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +176,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b5f01288943c94bba1968a5f6fae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114720093166600620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788233521140512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87edc01fe2ab8ff40b1f992506c7fbaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!114 &114728795545718488
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2641,9 +2641,9 @@ GameObject:
   - component: {fileID: 1998970170}
   - component: {fileID: 1998970169}
   - component: {fileID: 1998970168}
-  - component: {fileID: 1998970165}
   - component: {fileID: 1998970171}
   - component: {fileID: 1998970172}
+  - component: {fileID: 1998970173}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -2716,19 +2716,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1998970165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1998970161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88fe56d34fc3f4d47a3be1cc100f26bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
-  playerStatus: {fileID: 0}
 --- !u!58 &1998970166
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2822,3 +2809,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 797873894}
+--- !u!114 &1998970173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d3362eb12d77042861fab9df80f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}

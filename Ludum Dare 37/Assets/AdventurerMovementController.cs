@@ -28,8 +28,8 @@ public class AdventurerMovementController : MonoBehaviour {
             }
             else
             {
-                Vector2 movement = vector.normalized * (speed * Time.deltaTime);
-                rb2d.MovePosition(rb2d.position + movement);
+                Vector2 movement = vector.normalized * (speed);
+                rb2d.velocity = movement;
             }
         }
 	}

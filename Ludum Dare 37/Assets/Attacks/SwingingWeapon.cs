@@ -10,7 +10,7 @@ public class SwingingWeapon : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        transform.RotateAround(transform.parent.position, Vector3.forward, getAngleAtTime(0));
+        transform.RotateAround(transform.parent.position, Vector3.back, getAngleAtTime(0));
     }
 	
 	// Update is called once per frame
@@ -20,10 +20,7 @@ public class SwingingWeapon : MonoBehaviour {
         progress += Time.deltaTime;
         float percentThrough = progress / duration;
         float currentAngle = getAngleAtTime(progress);
-        Debug.Log(currentAngle);
-        Debug.Log(percentThrough);
-        Debug.Log(currentAngle - previousAngle);
-        transform.RotateAround(transform.parent.position, Vector3.forward, (currentAngle - previousAngle));
+        transform.RotateAround(transform.parent.position, Vector3.back, (currentAngle - previousAngle));
         if (percentThrough >= 1)
         {
             Destroy(gameObject);

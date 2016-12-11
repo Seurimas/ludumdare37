@@ -12,6 +12,11 @@ public class WeaponSwing : AttackBehavior
     public float swingDuration = 0.5f;
     private GameObject target;
     private GameObject swingObject;
+    private Rigidbody2D rb2d;
+    public void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
     public override void engage(AdventurerAttackController me, GameObject target)
     {
         this.target = target;
@@ -27,6 +32,7 @@ public class WeaponSwing : AttackBehavior
         if (swingObject != null && swingObject.activeInHierarchy)
         {
             me.legs.stop();
+            rb2d.velocity.Set(0, 0);
         }
         else
         {
@@ -50,7 +56,7 @@ public class WeaponSwing : AttackBehavior
         swingObject.GetComponent<SpriteRenderer>().sprite = sprite;
         swingObject.GetComponent<BoxCollider2D>().size = sprite.bounds.size;
         swingObject.transform.position += new Vector3(0, 1);
-        swingObject.GetComponent<SwingingWeapon>().targetAngle = Mathf.Atan2(angle.x, angle.y) * Mathf.Rad2Deg + 90;
+        swingObject.GetComponent<SwingingWeapon>().targetAngle = Mathf.Atan2(angle.x, angle.y) * Mathf.Rad2Deg;
         swingObject.GetComponent<SwingingWeapon>().duration = swingDuration;
     }
 }

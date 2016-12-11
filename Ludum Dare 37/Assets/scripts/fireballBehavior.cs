@@ -7,6 +7,7 @@ public class fireballBehavior : MonoBehaviour {
     public int speed = 0;
     public int direction = 0;
     public Rigidbody2D rb2D;
+    
     // Use this for initialization
     void Start () {
         rotate_sprite();

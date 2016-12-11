@@ -62,7 +62,8 @@ public class playerStatusController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
-            health -= 10;
+            //health -= 10;
+            health -= collision.gameObject.GetComponent<SwingingWeapon>().weaponDamage;
         }
     }
 }

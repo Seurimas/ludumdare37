@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61939526531843912}
   m_Layer: 0
   m_Name: WeaponSwing
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   swingAngle: 180
   targetAngle: 0
   duration: 0
+  weaponDamage: 17
 --- !u!212 &212739701588006534
 SpriteRenderer:
   m_ObjectHideFlags: 1

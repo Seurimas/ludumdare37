@@ -7,9 +7,13 @@ public class AdventurerManager : MonoBehaviour {
     public List<GameObject> adventurerPrefabs;
     public List<GameObject> doors;
     public List<GameObject> loots;
-
-	// Use this for initialization
-	void Start () {
+    public void initialize(List<GameObject> doors, List<GameObject> loots)
+    {
+        this.doors = doors;
+        this.loots = loots;
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -38,5 +42,6 @@ public class AdventurerManager : MonoBehaviour {
         GameObject prefab = adventurerPrefabs[Random.Range(0, adventurerPrefabs.Count)];
         GameObject adventurer = Instantiate(prefab, spawnLocation, new Quaternion());
         adventurer.GetComponent<AdventurerStateController>().initialize(door, loot);
+        adventurer.GetComponent<SpriteRenderer>().sprite = adventurer.GetComponent<AdventurerSpriteSet>().getRandomSprite();
     }
 }

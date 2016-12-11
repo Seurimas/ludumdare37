@@ -10,8 +10,7 @@ public class Loader : MonoBehaviour {
     void Awake() {
         if (GameManager.instance == null)
             Instantiate(gameManager);
-        GameManager.instance.adventurerManager.doors = doors;
-        GameManager.instance.adventurerManager.loots = loots;
+        GameManager.instance.adventurerManager.initialize(doors, loots);
     }
 	
 	// Update is called once per frame

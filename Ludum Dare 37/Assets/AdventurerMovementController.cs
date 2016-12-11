@@ -19,25 +19,27 @@ public class AdventurerMovementController : MonoBehaviour {
 	void Update () {
         if (targetPosition != null)
         {
-            Vector3 vector = getVectorToTarget();
-            if (vector.magnitude < 0.125f)
+            Vector3 vector = (targetPosition.Value - transform.position);
+            if (vector.magnitude < speed * Time.deltaTime)
             {
                 targetPosition = null;
-                mind.OnReachWaypoint(nextWaypoint);
+                if (nextWaypoint != null)
+                    mind.OnReachWaypoint(nextWaypoint);
             }
             else
             {
-                Vector2 movement = getVectorToTarget().normalized * (speed * Time.deltaTime);
+                Vector2 movement = vector.normalized * (speed * Time.deltaTime);
                 rb2d.MovePosition(rb2d.position + movement);
             }
         }
 	}
 
-    private Vector3 getVectorToTarget()
+    internal void advanceTowards(Vector3 position)
     {
-        return (targetPosition.Value - transform.position);
+        targetPosition = position;
+        nextWaypoint = null;
     }
-    
+
     public void moveTo(Waypoint target)
     {
         targetPosition = target.transform.position;

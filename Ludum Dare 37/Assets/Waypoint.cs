@@ -51,4 +51,20 @@ public class Waypoint : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public static Waypoint getNearestTo(GameObject target)
+    {
+        Waypoint nearest = null;
+        float minSqrMag = 100000;
+        foreach (Waypoint waypoint in GameObject.FindObjectsOfType<Waypoint>())
+        {
+            float sqrMag = (target.transform.position - waypoint.transform.position).sqrMagnitude;
+            if (sqrMag < minSqrMag) {
+                minSqrMag = sqrMag;
+                nearest = waypoint;
+            }
+        }
+        Debug.Log(nearest);
+        return nearest;
+    }
 }

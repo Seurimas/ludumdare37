@@ -5,40 +5,24 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Hug", menuName = "Attack/Hug", order = 1)]
-public class Hug : ScriptableObject, AttackBehavior
+public class Hug : AttackBehavior
 {
     private GameObject target;
-    public void engage(GameObject me, GameObject target)
+    public override void engage(AdventurerAttackController me, GameObject target)
     {
         this.target = target;
     }
 
-    public void update(GameObject me)
+    public override void update(AdventurerAttackController me)
     {
-        if (me.GetComponent<AdventurerStateController>().state == AdventurerStateController.STATE.ATTACKING)
+        if (me.mind.state == AdventurerStateController.STATE.ATTACKING)
         {
-            me.GetComponent<AdventurerMovementController>().advanceTowards(target.transform.position);
+            me.legs.advanceTowards(target.transform.position);
         }
     }
 
-    public int getAttackDistance(GameObject me)
+    public override float getAttackDistance(AdventurerAttackController me)
     {
-        return 2;
-    }
-}
-public class MakeScriptableObject
-{
-    [MenuItem("Assets/Create/My Scriptable Object")]
-    public static void CreateMyAsset()
-    {
-        Hug asset = ScriptableObject.CreateInstance<Hug>();
-
-        AssetDatabase.CreateAsset(asset, "Assets/Hug.asset");
-        AssetDatabase.SaveAssets();
-
-        EditorUtility.FocusProjectWindow();
-
-        Selection.activeObject = asset;
+        return 5;
     }
 }

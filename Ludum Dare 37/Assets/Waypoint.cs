@@ -15,6 +15,7 @@ public class Waypoint : MonoBehaviour {
     {
         List<Waypoint> unvisited = new List<Waypoint>();
         unvisited.AddRange(adjacentWaypoints);
+        transitionWaypoint[this] = this;
         foreach (Waypoint near in adjacentWaypoints)
         {
             transitionWaypoint[near] = near;
@@ -45,6 +46,15 @@ public class Waypoint : MonoBehaviour {
     public Waypoint getNextWaypointTo(Waypoint target)
     {
         return transitionWaypoint[target];
+    }
+
+    public void OnDrawGizmos()
+    {
+        foreach (Waypoint other in adjacentWaypoints)
+        {
+            Gizmos.DrawLine(transform.position, other.transform.position);
+            Gizmos.DrawWireSphere(transform.position, 5);
+        }
     }
 
     // Update is called once per frame

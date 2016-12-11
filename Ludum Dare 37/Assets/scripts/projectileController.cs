@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class projectileController : MonoBehaviour {
     public int speed;
-    public int damageDealt;
     public Rigidbody2D rb2d;
 	// Use this for initialization
 	void Start () {
@@ -14,12 +13,12 @@ public class projectileController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Debug.Log(transform.parent.gameObject.name);
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map")
+        if (collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map" || collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
         }

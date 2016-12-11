@@ -32,19 +32,19 @@ public class playerShootController : MonoBehaviour {
         switch (playerStatus.getFaceDirection())
         {
             case 0:
-                missile = Instantiate(projectile, transform.position, Quaternion.AngleAxis(180, new Vector3(0, 0, 1)));
+                missile = Instantiate(projectile, new Vector3(0,-1.5f) + transform.position, Quaternion.AngleAxis(180, new Vector3(0, 0, 1)));
                 missile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1 * missile.GetComponent<projectileController>().speed);
                 break;
             case 1:
-                missile = Instantiate(projectile, transform.position, Quaternion.AngleAxis(270, new Vector3(0, 0, 1)));
+                missile = Instantiate(projectile, new Vector3(1.5f,0) + transform.position, Quaternion.AngleAxis(270, new Vector3(0, 0, 1)));
                 missile.GetComponent<Rigidbody2D>().velocity = new Vector2(missile.GetComponent<projectileController>().speed,0);
                 break;
             case 2:
-                missile = Instantiate(projectile, transform.position, Quaternion.identity);
+                missile = Instantiate(projectile, new Vector3(0, 1.5f) + transform.position, Quaternion.identity);
                 missile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, missile.GetComponent<projectileController>().speed);
                 break;
             case 3:
-                missile = Instantiate(projectile, transform.position, Quaternion.AngleAxis(90, new Vector3(0, 0, 1)));
+                missile = Instantiate(projectile, new Vector3(-1.5f,0) + transform.position, Quaternion.AngleAxis(90, new Vector3(0, 0, 1)));
                 missile.GetComponent<Rigidbody2D>().velocity = new Vector2(-1 * missile.GetComponent<projectileController>().speed, 0);
                 break;
         }

@@ -6,27 +6,10 @@ public class fireballBehavior : MonoBehaviour {
 
     public int speed = 0;
     public int direction = 0;
-    Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     // Use this for initialization
     void Start () {
-        rb2D = GetComponent<Rigidbody2D>();
-        int my_angle = (int)transform.eulerAngles.z;
-        switch (my_angle)
-        {
-            case 0:
-                rb2D.velocity = new Vector2(0,speed);
-                break;
-            case 90:
-                rb2D.velocity = new Vector2(speed * -1, 0);
-                break;
-            case 180:
-                rb2D.velocity = new Vector2(0,speed * -1);
-                break;
-            case 270:
-                rb2D.velocity = new Vector2(speed,0);
-                break;
-            
-        }
+        rotate_sprite();
         //Destroy after 1 secs
         Destroy(gameObject,1.0f);
     }
@@ -35,6 +18,29 @@ public class fireballBehavior : MonoBehaviour {
     void Update () {
 		
 	}
+    private void rotate_sprite()
+    {
+        //Initialize rigidBody2D
+        rb2D = GetComponent<Rigidbody2D>();
+        //Get current rotation
+        int my_angle = (int)transform.eulerAngles.z;
+
+        switch (my_angle)
+        {
+            case 0:
+                rb2D.velocity = new Vector2(0, speed);
+                break;
+            case 90:
+                rb2D.velocity = new Vector2(speed* -1, 0);
+                break;
+            case 180:
+                rb2D.velocity = new Vector2(0, speed* -1);
+                break;
+            case 270:
+                rb2D.velocity = new Vector2(speed,0);
+                break;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

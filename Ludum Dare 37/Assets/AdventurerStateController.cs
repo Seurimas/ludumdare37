@@ -87,14 +87,14 @@ public class AdventurerStateController : MonoBehaviour {
                 }
                 break;
             case STATE.APPROACHING:
-                if (distanceToTarget() < fists.attackDistance)
+                if (distanceToTarget() < fists.getAttackDistance())
                 {
                     Debug.Log("Engaging!");
                     engage(aggro);
                 }
                 break;
             case STATE.ATTACKING:
-                if (distanceToTarget() > fists.attackDistance + 1)
+                if (distanceToTarget() > fists.getAttackDistance() + 1)
                 {
                     Debug.Log("Approaching!");
                     approach(aggro);
@@ -141,7 +141,7 @@ public class AdventurerStateController : MonoBehaviour {
             case STATE.ADVANCING:
             case STATE.LOOTING:
                 aggro = gameObject;
-                if (distanceToTarget() > fists.attackDistance)
+                if (distanceToTarget() > fists.getAttackDistance())
                     approach(aggro);
                 else
                     engage(aggro);

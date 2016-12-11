@@ -46,12 +46,11 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if (gameActive && bahamut == null)
         {
-            gameActive = false;
-            gameEndProgress = 0;
-            musicSource.Stop();
-            musicSource.loop = false;
-            musicSource.clip = gameOver;
-            musicSource.Play();
+            loseGame();
+        } else if (gameActive && adventurerManager.getAdventurerCount() == 0 && resourceManager.getGold() == 0)
+        {
+            loseGame();
+            Destroy(adventurerManager.timerText);
         } else if (!gameActive && gameEndProgress < gameEndDuration)
         {
             gameEndProgress += Time.deltaTime;
@@ -61,4 +60,14 @@ public class GameManager : MonoBehaviour {
                 SceneManager.LoadScene("mainMenu");
         }
 	}
+
+    public void loseGame()
+    {
+        gameActive = false;
+        gameEndProgress = 0;
+        musicSource.Stop();
+        musicSource.loop = false;
+        musicSource.clip = gameOver;
+        musicSource.Play();
+    }
 }

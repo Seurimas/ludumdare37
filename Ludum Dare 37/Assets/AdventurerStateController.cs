@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AdventurerStateController : MonoBehaviour {
     public enum STATE
@@ -42,6 +39,7 @@ public class AdventurerStateController : MonoBehaviour {
                     state = STATE.LOOTING;
                     break;
                 case STATE.RETREATING:
+                    goldEarned = -1;
                     Destroy(this.gameObject);
                     break;
                 case STATE.APPROACHING:
@@ -80,9 +78,17 @@ public class AdventurerStateController : MonoBehaviour {
                     move(door);
                 } else if (zone.gold == 0)
                 {
-                    state = STATE.ADVANCING;
-                    loot = LootZone.getRandomWithLoot().GetComponent<Waypoint>();
-                    move(loot);
+                    LootZone next = LootZone.getRandomWithLoot();
+                    if (next != null)
+                    {
+                        state = STATE.ADVANCING;
+                        loot = next.GetComponent<Waypoint>();
+                        move(loot);
+                    } else
+                    {
+                        state = STATE.RETREATING;
+                        move(door);
+                    }
                 }
                 break;
             case STATE.ADVANCING:
@@ -164,5 +170,11 @@ public class AdventurerStateController : MonoBehaviour {
             return (aggro.transform.position - transform.position).magnitude;
         else
             return Mathf.Infinity;
+    }
+
+    public void OnDestroy()
+    {
+        if (goldEarned >= 0)
+            loot.GetComponent<LootZone>().accrue(goldEarned + Random.Range(0, 0.5f));
     }
 }

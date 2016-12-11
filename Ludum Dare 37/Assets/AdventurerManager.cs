@@ -7,7 +7,7 @@ public class AdventurerManager : MonoBehaviour {
     public List<GameObject> adventurerPrefabs;
     private List<GameObject> doors;
     private List<GameObject> loots;
-    private Text timerText, currentText;
+    public Text timerText, currentText;
     private string timerFormat, currentFormat;
     public void initialize(List<GameObject> doors, List<GameObject> loots)
     {
@@ -31,7 +31,7 @@ public class AdventurerManager : MonoBehaviour {
 	void Update () {
         if (timerText == null || currentText == null)
             return; // We're not active right now.
-        int adventurersLeft = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        int adventurersLeft = getAdventurerCount();
         if (adventurersLeft > 0)
         {
             waveProgress = 0;
@@ -48,6 +48,11 @@ public class AdventurerManager : MonoBehaviour {
             currentText.text = "";
         }
 	}
+
+    public int getAdventurerCount()
+    {
+        return GameObject.FindGameObjectsWithTag("Enemy").Length;
+    }
 
     public void spawnRandomAdventurerGroup()
     {

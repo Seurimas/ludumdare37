@@ -13,7 +13,10 @@ public class ResourceManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        if (goldText == null)
+            return; // We're not active right now.
         float goldCount = 0;
 		foreach (GameObject loot in loots)
         {

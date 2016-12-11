@@ -647,8 +647,7 @@ MonoBehaviour:
   goldText: {fileID: 25322279}
   timerText: {fileID: 1103397592}
   currentText: {fileID: 3996648}
-  mainTheme: {fileID: 8300000, guid: 4328a4065b2ccfe4f8c4da6088dcb374, type: 3}
-  gameOver: {fileID: 8300000, guid: 333e34faa325faa44824d8854b384d45, type: 3}
+  bahamut: {fileID: 1998970161}
 --- !u!114 &461493278
 MonoBehaviour:
   m_ObjectHideFlags: 0

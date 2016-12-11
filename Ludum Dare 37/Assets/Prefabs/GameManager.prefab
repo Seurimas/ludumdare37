@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4365949676355582}
   - component: {fileID: 114170827477255016}
   - component: {fileID: 114903516708084206}
+  - component: {fileID: 114012484921247000}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114012484921247000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1166606605023220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27372a3a04018f04bbede0dc7cac3c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!114 &114170827477255016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adventurerManager: {fileID: 0}
+  resourceManager: {fileID: 0}
 --- !u!114 &114903516708084206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,7 +79,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48251a3e19c4e948bef39795007cc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adventurerPrefabs:
-  - {fileID: 1846019831061736, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
-  doors: []
-  loots: []
+  waveGap: 5

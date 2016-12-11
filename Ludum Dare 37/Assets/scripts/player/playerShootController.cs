@@ -6,6 +6,7 @@ public class playerShootController : MonoBehaviour {
     public GameObject projectile;
     private GameObject missile;
     private playerStatusController playerStatus;
+    private bool ultimateEnable;
 	// Use this for initialization
 	void Start () {
         playerStatus = this.GetComponent<playerStatusController>();
@@ -13,6 +14,11 @@ public class playerShootController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (ultimateEnable)
+        {
+            shoot();
+        }
+
         trigger_shoot();
 	}
 
@@ -20,8 +26,12 @@ public class playerShootController : MonoBehaviour {
     {
         if (Input.GetKeyDown("space"))
         {
-            //Instantiate(projectile, transform.position, Quaternion.identity);
             shoot();
+        }
+
+        if (Input.GetKeyDown("q"))
+        {
+            ultimateEnable = !ultimateEnable;
         }
     }
 

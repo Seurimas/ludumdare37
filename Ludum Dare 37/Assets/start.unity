@@ -2643,6 +2643,7 @@ GameObject:
   - component: {fileID: 1998970168}
   - component: {fileID: 1998970165}
   - component: {fileID: 1998970171}
+  - component: {fileID: 1998970172}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -2774,7 +2775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   face_direction: 0
-  health: 0
 --- !u!114 &1998970169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2798,8 +2798,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163956ca5854f2144b59518152b5c3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 0}
 --- !u!114 &1998970171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87edc01fe2ab8ff40b1f992506c7fbaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 210
+--- !u!114 &1998970172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2811,4 +2822,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 797873894}
-  playerStatus: {fileID: 0}

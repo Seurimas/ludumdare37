@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2fd13ad85a2b0429d9b7f372b85c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingAngle: 3.1415927
+  swingAngle: 180
   targetAngle: 0
   duration: 0
 --- !u!212 &212739701588006534

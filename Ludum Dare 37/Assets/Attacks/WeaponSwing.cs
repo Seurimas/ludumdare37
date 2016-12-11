@@ -8,6 +8,7 @@ public class WeaponSwing : AttackBehavior
     public GameObject swingingWeaponPrefab;
     public Sprite sprite;
     public float engageDistance = 3f;
+    public float disengageDistance = 7f;
     public float swingSize = 1f;
     public float swingDuration = 0.5f;
     private GameObject target;
@@ -29,7 +30,13 @@ public class WeaponSwing : AttackBehavior
 
     public override void update(AdventurerAttackController me)
     {
-        if (swingObject != null && swingObject.activeInHierarchy)
+        float distance = me.mind.distanceToTarget();
+        if ((me.mind.state == AdventurerStateController.STATE.ATTACKING || me.mind.state == AdventurerStateController.STATE.APPROACHING) && 
+                distance > disengageDistance)
+        {
+            me.mind.disengage();
+        }
+        else if (swingObject != null && swingObject.activeInHierarchy)
         {
             me.legs.stop();
             rb2d.velocity.Set(0, 0);
@@ -38,7 +45,6 @@ public class WeaponSwing : AttackBehavior
         {
             if (me.mind.state == AdventurerStateController.STATE.ATTACKING)
             {
-                float distance = me.mind.distanceToTarget();
                 if (distance < swingSize)
                 {
                     swingAt(me.transform, (target.transform.position - me.transform.position));

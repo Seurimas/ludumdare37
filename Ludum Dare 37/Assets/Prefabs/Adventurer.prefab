@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 58591299861693190}
   - component: {fileID: 114441547125531076}
   - component: {fileID: 114382688347480520}
+  - component: {fileID: 114946633215117090}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Enemy
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4148b9aae9dd44e80380c17abefc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 4
 --- !u!114 &114382688347480520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +171,8 @@ MonoBehaviour:
     type: 2}
   sprite: {fileID: 21300006, guid: 068a1f2a934f4214b8aedf44ece95c47, type: 3}
   engageDistance: 3
-  swingSize: 1.25
+  disengageDistance: 7
+  swingSize: 2
   swingDuration: 0.75
 --- !u!114 &114441547125531076
 MonoBehaviour:
@@ -185,6 +187,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mind: {fileID: 0}
   legs: {fileID: 0}
+--- !u!114 &114946633215117090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b5f01288943c94bba1968a5f6fae6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114994536185691510
 MonoBehaviour:
   m_ObjectHideFlags: 1

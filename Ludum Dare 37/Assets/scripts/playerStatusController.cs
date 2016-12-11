@@ -40,4 +40,12 @@ public class playerStatusController : MonoBehaviour {
 
         return face_direction;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Weapon")
+        {
+            health -= 10;
+        }
+    }
 }

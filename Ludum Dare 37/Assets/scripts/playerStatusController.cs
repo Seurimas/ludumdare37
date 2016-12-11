@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerStatusController : MonoBehaviour {
     public int face_direction = 0;
+    public int health;
 	// Use this for initialization
 	void Start () {
 		

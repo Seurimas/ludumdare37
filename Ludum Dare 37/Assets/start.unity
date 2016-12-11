@@ -2501,9 +2501,12 @@ GameObject:
   - component: {fileID: 1998970164}
   - component: {fileID: 1998970163}
   - component: {fileID: 1998970162}
-  - component: {fileID: 1998970165}
   - component: {fileID: 1998970167}
   - component: {fileID: 1998970166}
+  - component: {fileID: 1998970170}
+  - component: {fileID: 1998970169}
+  - component: {fileID: 1998970168}
+  - component: {fileID: 1998970165}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -2584,11 +2587,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998970161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2931d9ede357c894eb0513767afe2e42, type: 3}
+  m_Script: {fileID: 11500000, guid: 88fe56d34fc3f4d47a3be1cc100f26bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  fireball: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+  projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+  playerStatus: {fileID: 0}
 --- !u!58 &1998970166
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2623,3 +2626,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1998970168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1d2cd14f8e5479fe9f55a4e75b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  face_direction: 0
+--- !u!114 &1998970169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d65947e78f313428dba0c68a06963f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &1998970170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163956ca5854f2144b59518152b5c3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatus: {fileID: 0}

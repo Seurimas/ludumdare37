@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BehemotPlayController : MonoBehaviour {
     private Animator animator;
-    public Rigidbody2D rb2D;
+    Rigidbody2D rb2D;
     public float speed = 10.0f;
+    public GameObject fireball;
     // Use this for initialization
     void Start () {
         animator = this.GetComponent<Animator>();
@@ -37,5 +38,13 @@ public class BehemotPlayController : MonoBehaviour {
 
         //transform.position += new Vector3(x, y) * Time.deltaTime * speed;
         rb2D.velocity = new Vector2(x * speed, y * speed);
+        shoot();
+    }
+
+    void shoot() {
+        if (Input.GetKeyDown("space")) {
+            Instantiate(fireball,transform.position,Quaternion.identity);
+        }
+
     }
 }

@@ -9,21 +9,21 @@ using UnityEngine;
 public class Hug : ScriptableObject, AttackBehavior
 {
     private GameObject target;
-    public void engage(GameObject me, GameObject target)
+    public void engage(AdventurerAttackController me, GameObject target)
     {
         this.target = target;
     }
 
-    public void update(GameObject me)
+    public void update(AdventurerAttackController me)
     {
-        if (me.GetComponent<AdventurerStateController>().state == AdventurerStateController.STATE.ATTACKING)
+        if (me.mind.state == AdventurerStateController.STATE.ATTACKING)
         {
-            me.GetComponent<AdventurerMovementController>().advanceTowards(target.transform.position);
+            me.legs.advanceTowards(target.transform.position);
         }
     }
 
-    public int getAttackDistance(GameObject me)
+    public float getAttackDistance(AdventurerAttackController me)
     {
-        return 2;
+        return 5;
     }
 }

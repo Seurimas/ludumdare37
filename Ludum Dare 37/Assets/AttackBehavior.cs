@@ -2,7 +2,7 @@
 
 public interface AttackBehavior
 {
-    void engage(GameObject me, GameObject target);
-    void update(GameObject me);
-    int getAttackDistance(GameObject me);
+    void engage(AdventurerAttackController me, GameObject target);
+    void update(AdventurerAttackController me);
+    float getAttackDistance(AdventurerAttackController me);
 }

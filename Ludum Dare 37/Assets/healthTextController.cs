@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class healthTextController : MonoBehaviour {
     public Text healthText;
-    public healthController healthController;
+    private healthController healthController;
 	// Use this for initialization
 	void Start () {
         healthController = this.GetComponent<healthController>();

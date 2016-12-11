@@ -5,7 +5,7 @@ using UnityEngine;
 public class bahamutAnimationController : MonoBehaviour {
     private Animator animator;
     int direction = 0;
-    public playerStatusController playerStatus;
+    private playerStatusController playerStatus;
     // Use this for initialization
     void Start () {
         animator = this.GetComponent<Animator>();

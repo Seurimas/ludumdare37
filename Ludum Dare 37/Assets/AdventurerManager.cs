@@ -7,9 +7,13 @@ public class AdventurerManager : MonoBehaviour {
     public List<GameObject> adventurerPrefabs;
     public List<GameObject> doors;
     public List<GameObject> loots;
-
-	// Use this for initialization
-	void Start () {
+    public void initialize(List<GameObject> doors, List<GameObject> loots)
+    {
+        this.doors = doors;
+        this.loots = loots;
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

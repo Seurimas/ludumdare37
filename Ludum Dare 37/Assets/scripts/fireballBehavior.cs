@@ -10,17 +10,25 @@ public class fireballBehavior : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb2D = GetComponent<Rigidbody2D>();
-
-        switch(direction)
+        int my_angle = (int)transform.eulerAngles.z;
+        switch (my_angle)
         {
-            case 1:
-                rb2D.velocity = new Vector2(speed,0);
+            case 0:
+                rb2D.velocity = new Vector2(0,speed);
                 break;
-            case 3:
+            case 90:
                 rb2D.velocity = new Vector2(speed * -1, 0);
                 break;
+            case 180:
+                rb2D.velocity = new Vector2(0,speed * -1);
+                break;
+            case 270:
+                rb2D.velocity = new Vector2(speed,0);
+                break;
+            
         }
-
+        //Destroy after 1 secs
+        Destroy(gameObject,1.0f);
     }
 
     // Update is called once per frame
@@ -31,7 +39,7 @@ public class fireballBehavior : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string name = collision.gameObject.name;
-        if (name != "bahamut"){
+        if (name != "bahamut" && name != "fireball(Clone)"){
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

@@ -10,6 +10,7 @@ public class Loader : MonoBehaviour {
     public Text goldText;
     public Text timerText;
     public Text currentText;
+    public GameObject bahamut;
     // Use this for initialization
     void Awake() {
         if (GameManager.instance == null)
@@ -18,6 +19,7 @@ public class Loader : MonoBehaviour {
         GameManager.instance.resourceManager.initialize(loots);
         GameManager.instance.adventurerManager.initializeGUI(timerText, currentText);
         GameManager.instance.resourceManager.initializeGUI(goldText);
+        GameManager.instance.setDragon(bahamut);
     }
 	
 	// Update is called once per frame

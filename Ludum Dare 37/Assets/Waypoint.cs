@@ -69,6 +69,8 @@ public class Waypoint : MonoBehaviour {
         float minSqrMag = 100000;
         foreach (Waypoint waypoint in GameObject.FindObjectsOfType<Waypoint>())
         {
+            if (target == null)
+                return waypoint;
             float sqrMag = (target.transform.position - waypoint.transform.position).sqrMagnitude;
             if (sqrMag < minSqrMag) {
                 minSqrMag = sqrMag;

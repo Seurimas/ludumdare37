@@ -29,6 +29,8 @@ public class AdventurerManager : MonoBehaviour {
     private float waveProgress = 0;
 	// Update is called once per frame
 	void Update () {
+        if (timerText == null || currentText == null)
+            return; // We're not active right now.
         int adventurersLeft = GameObject.FindGameObjectsWithTag("Enemy").Length;
         if (adventurersLeft > 0)
         {

@@ -3,25 +3,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WeaponSwing", menuName = "Attack/WeaponSwing", order = 1)]
-public class WeaponSwing : ScriptableObject, AttackBehavior
+public class WeaponSwing : AttackBehavior
 {
+    public GameObject swingingWeaponPrefab;
     public Sprite sprite;
     public float engageDistance = 3f;
     public float swingSize = 1f;
     public float swingDuration = 0.5f;
-    public void engage(AdventurerAttackController me, GameObject target)
+    private GameObject target;
+    private GameObject swingObject;
+    public override void engage(AdventurerAttackController me, GameObject target)
     {
-        
+        this.target = target;
     }
 
-    public float getAttackDistance(AdventurerAttackController me)
+    public override float getAttackDistance(AdventurerAttackController me)
     {
         return engageDistance;
     }
 
-    public void update(AdventurerAttackController me)
+    public override void update(AdventurerAttackController me)
     {
-        
+        if (swingObject != null && swingObject.activeInHierarchy)
+        {
+            me.legs.stop();
+        }
+        else
+        {
+            if (me.mind.state == AdventurerStateController.STATE.ATTACKING)
+            {
+                float distance = me.mind.distanceToTarget();
+                if (distance < swingSize)
+                {
+                    swingAt(me.transform, (target.transform.position - me.transform.position));
+                } else
+                {
+                    me.legs.advanceTowards(target.transform.position);
+                }
+            }
+        }
+    }
+
+    private void swingAt(Transform location, Vector3 angle)
+    {
+        swingObject = GameObject.Instantiate(swingingWeaponPrefab, location.position, Quaternion.identity, location);
+        swingObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        swingObject.GetComponent<BoxCollider2D>().size = sprite.bounds.size;
+        swingObject.transform.position += new Vector3(0, 1);
+        swingObject.GetComponent<SwingingWeapon>().targetAngle = Mathf.Atan2(angle.x, angle.y) * Mathf.Rad2Deg + 90;
+        swingObject.GetComponent<SwingingWeapon>().duration = swingDuration;
     }
 }

@@ -7,13 +7,12 @@ using UnityEngine;
 public class AdventurerAttackController : MonoBehaviour {
     public AdventurerStateController mind;
     public AdventurerMovementController legs;
-    public ScriptableObject attackScript;
     private AttackBehavior attack;
 	// Use this for initialization
 	void Start () {
         mind = GetComponent<AdventurerStateController>();
         legs = GetComponent<AdventurerMovementController>();
-        attack = attackScript as AttackBehavior;
+        attack = GetComponent<AttackBehavior>();
 	}
 	
 	// Update is called once per frame

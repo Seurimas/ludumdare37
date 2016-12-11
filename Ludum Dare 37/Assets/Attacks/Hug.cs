@@ -5,16 +5,15 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Hug", menuName = "Attack/Hug", order = 1)]
-public class Hug : ScriptableObject, AttackBehavior
+public class Hug : AttackBehavior
 {
     private GameObject target;
-    public void engage(AdventurerAttackController me, GameObject target)
+    public override void engage(AdventurerAttackController me, GameObject target)
     {
         this.target = target;
     }
 
-    public void update(AdventurerAttackController me)
+    public override void update(AdventurerAttackController me)
     {
         if (me.mind.state == AdventurerStateController.STATE.ATTACKING)
         {
@@ -22,7 +21,7 @@ public class Hug : ScriptableObject, AttackBehavior
         }
     }
 
-    public float getAttackDistance(AdventurerAttackController me)
+    public override float getAttackDistance(AdventurerAttackController me)
     {
         return 5;
     }

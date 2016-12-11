@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114337100420475384}
   - component: {fileID: 58591299861693190}
   - component: {fileID: 114441547125531076}
+  - component: {fileID: 114382688347480520}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Enemy
@@ -154,6 +155,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &114382688347480520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7c2b6a0f4750c4185ab5564757b2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingingWeaponPrefab: {fileID: 1975321907007740, guid: f014d189428646d4ea8e97bb792a9324,
+    type: 2}
+  sprite: {fileID: 21300006, guid: 068a1f2a934f4214b8aedf44ece95c47, type: 3}
+  engageDistance: 3
+  swingSize: 1.25
+  swingDuration: 0.75
 --- !u!114 &114441547125531076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd84c5298bce9324b8247b9f6783dc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackScript: {fileID: 11400000, guid: f343c1ec05760424ba5c12fa55dc1b60, type: 2}
+  mind: {fileID: 0}
+  legs: {fileID: 0}
 --- !u!114 &114994536185691510
 MonoBehaviour:
   m_ObjectHideFlags: 1

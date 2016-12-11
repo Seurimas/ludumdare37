@@ -10,6 +10,8 @@ public class Loader : MonoBehaviour {
     public Text goldText;
     public Text timerText;
     public Text currentText;
+    public AudioClip mainTheme;
+    public AudioClip gameOver;
     // Use this for initialization
     void Awake() {
         if (GameManager.instance == null)

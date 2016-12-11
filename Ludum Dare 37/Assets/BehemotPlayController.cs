@@ -8,6 +8,7 @@ public class BehemotPlayController : MonoBehaviour {
     public float speed = 10.0f;
     public GameObject fireball;
     // Use this for initialization
+    int direction = 0;
     void Start () {
         animator = this.GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
@@ -18,8 +19,6 @@ public class BehemotPlayController : MonoBehaviour {
       
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        int direction = 0;
-
         if (y > 0)
         {
             direction = 2;

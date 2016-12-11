@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
+    public bool fudgeable = true;
     public List<Waypoint> adjacentWaypoints;
     private Dictionary<Waypoint, Waypoint> transitionWaypoint = new Dictionary<Waypoint, Waypoint>();
 	// Use this for initialization

@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 435616681}
   - {fileID: 1666534336}
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 926775415}
   - {fileID: 1310100003}
@@ -437,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1061626867}
 --- !u!1001 &386865112
@@ -512,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
@@ -829,6 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1899127094}
   - {fileID: 1562728224}
@@ -1224,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1878805864}
 --- !u!1001 &926775412
@@ -1298,6 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 351015566}
 --- !u!1001 &931617138
@@ -1483,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 368928415}
   - {fileID: 1310100003}
@@ -1792,6 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1061626867}
   - {fileID: 351015566}
@@ -1806,7 +1815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310100002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56, y: -3.41, z: 0}
+  m_LocalPosition: {x: -0.44, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1390582832}
@@ -1868,6 +1877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1576069657}
 --- !u!114 &1364205382
@@ -2087,9 +2097,54 @@ Transform:
   - {fileID: 1878805863}
   - {fileID: 1899127095}
   - {fileID: 1666534337}
+  - {fileID: 1488800229}
   m_Father: {fileID: 1645132290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1488800228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1488800229}
+  - component: {fileID: 1488800230}
+  m_Layer: 0
+  m_Name: BridgeTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1488800229
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488800228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.59, y: -5.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390582832}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1488800230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488800228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fudgeable: 0
+  adjacentWaypoints:
+  - {fileID: 1899127094}
+  - {fileID: 481950045}
 --- !u!1 &1562728223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,6 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 481950045}
@@ -2161,6 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
@@ -2235,6 +2292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 143400256}
   - {fileID: 1899127094}
@@ -2333,6 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 903285854}
@@ -2363,6 +2422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1666534336}
   - {fileID: 481950045}

@@ -27,18 +27,3 @@ public class Hug : ScriptableObject, AttackBehavior
         return 2;
     }
 }
-public class MakeScriptableObject
-{
-    [MenuItem("Assets/Create/My Scriptable Object")]
-    public static void CreateMyAsset()
-    {
-        Hug asset = ScriptableObject.CreateInstance<Hug>();
-
-        AssetDatabase.CreateAsset(asset, "Assets/Hug.asset");
-        AssetDatabase.SaveAssets();
-
-        EditorUtility.FocusProjectWindow();
-
-        Selection.activeObject = asset;
-    }
-}

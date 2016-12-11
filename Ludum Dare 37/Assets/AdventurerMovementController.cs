@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,17 +19,21 @@ public class AdventurerMovementController : MonoBehaviour {
         if (targetPosition != null)
         {
             Vector3 vector = (targetPosition.Value - transform.position);
-            if (vector.magnitude < speed * Time.deltaTime)
+            if (vector.magnitude < 0.125f)
             {
+                Debug.Log(string.Format("Reached {0}", nextWaypoint));
                 targetPosition = null;
                 if (nextWaypoint != null)
                     mind.OnReachWaypoint(nextWaypoint);
             }
             else
             {
-                Vector2 movement = vector.normalized * (speed * Time.deltaTime);
-                rb2d.MovePosition(rb2d.position + movement);
+                Vector2 movement = vector.normalized * (speed);
+                rb2d.velocity = movement;
             }
+        } else
+        {
+            rb2d.velocity.Set(0, 0);
         }
 	}
 
@@ -43,6 +46,8 @@ public class AdventurerMovementController : MonoBehaviour {
     public void moveTo(Waypoint target)
     {
         targetPosition = target.transform.position;
+        if (target.fudgeable)
+            targetPosition += new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         nextWaypoint = target;
     }
 

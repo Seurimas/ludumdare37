@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public interface AttackBehavior
+public abstract class AttackBehavior : MonoBehaviour
 {
-    void engage(GameObject me, GameObject target);
-    void update(GameObject me);
-    int getAttackDistance(GameObject me);
+    public abstract void engage(AdventurerAttackController me, GameObject target);
+    public abstract void update(AdventurerAttackController me);
+    public abstract float getAttackDistance(AdventurerAttackController me);
 }

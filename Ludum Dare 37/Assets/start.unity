@@ -301,9 +301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 435616681}
-  - {fileID: 1899127094}
+  - {fileID: 1666534336}
 --- !u!114 &143400257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 926775415}
   - {fileID: 1310100003}
@@ -437,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1061626867}
 --- !u!1001 &386865112
@@ -512,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
@@ -699,10 +703,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 3.9812355, y: -6.079544}
-      - {x: 13.868017, y: -6.097015}
-      - {x: 13.888962, y: -10.940744}
-      - {x: -0.061991215, y: -11.065289}
-      - {x: -0.094411016, y: -9.920772}
+      - {x: 13.745561, y: -6.158243}
+      - {x: 13.858347, y: -10.848902}
+      - {x: 0.15230846, y: -10.8203745}
+      - {x: 0.18111789, y: -9.9513855}
       - {x: 3.941576, y: -9.887394}
 --- !u!1 &472804102
 GameObject:
@@ -829,6 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1899127094}
   - {fileID: 1562728224}
@@ -1033,9 +1038,9 @@ EdgeCollider2D:
   - {x: -4.0144625, y: -9.976124}
   - {x: -3.9261928, y: -14.978996}
   - {x: 0.8391073, y: -14.911274}
-  - {x: 0.98576456, y: -12.222385}
+  - {x: 1.034317, y: -12.270938}
   - {x: 15.030866, y: -12.000094}
-  - {x: 15.034674, y: -6.059676}
+  - {x: 15.277439, y: -6.0839524}
   - {x: 16.046432, y: -6.0625553}
   - {x: 16.024546, y: -1.0354102}
   - {x: 12.064282, y: -0.95508456}
@@ -1224,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1878805864}
 --- !u!1001 &926775412
@@ -1298,6 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 351015566}
 --- !u!1001 &931617138
@@ -1483,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 368928415}
   - {fileID: 1310100003}
@@ -1792,6 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1061626867}
   - {fileID: 351015566}
@@ -1806,7 +1815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310100002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56, y: -3.41, z: 0}
+  m_LocalPosition: {x: -0.44, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1390582832}
@@ -1868,6 +1877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1576069657}
 --- !u!114 &1364205382
@@ -2086,9 +2096,55 @@ Transform:
   - {fileID: 351015567}
   - {fileID: 1878805863}
   - {fileID: 1899127095}
+  - {fileID: 1666534337}
+  - {fileID: 1488800229}
   m_Father: {fileID: 1645132290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1488800228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1488800229}
+  - component: {fileID: 1488800230}
+  m_Layer: 0
+  m_Name: BridgeTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1488800229
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488800228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.59, y: -5.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390582832}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1488800230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488800228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fudgeable: 0
+  adjacentWaypoints:
+  - {fileID: 1899127094}
+  - {fileID: 481950045}
 --- !u!1 &1562728223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 481950045}
@@ -2160,6 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 1
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 1061626867}
@@ -2206,6 +2264,50 @@ Transform:
   - {fileID: 1390582832}
   m_Father: {fileID: 472804104}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1666534335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1666534337}
+  - component: {fileID: 1666534336}
+  m_Layer: 0
+  m_Name: BridgeLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1666534336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666534335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fudgeable: 0
+  adjacentWaypoints:
+  - {fileID: 143400256}
+  - {fileID: 1899127094}
+--- !u!4 &1666534337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666534335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.54, y: -11.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390582832}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1732755017
 Prefab:
@@ -2289,6 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
   - {fileID: 1310100003}
   - {fileID: 903285854}
@@ -2319,8 +2422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e046f4940fc1b42409d7b10fab4d8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fudgeable: 0
   adjacentWaypoints:
-  - {fileID: 143400256}
+  - {fileID: 1666534336}
   - {fileID: 481950045}
 --- !u!4 &1899127095
 Transform:
@@ -2457,9 +2561,12 @@ GameObject:
   - component: {fileID: 1998970164}
   - component: {fileID: 1998970163}
   - component: {fileID: 1998970162}
-  - component: {fileID: 1998970165}
   - component: {fileID: 1998970167}
   - component: {fileID: 1998970166}
+  - component: {fileID: 1998970170}
+  - component: {fileID: 1998970169}
+  - component: {fileID: 1998970168}
+  - component: {fileID: 1998970165}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -2540,11 +2647,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998970161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2931d9ede357c894eb0513767afe2e42, type: 3}
+  m_Script: {fileID: 11500000, guid: 88fe56d34fc3f4d47a3be1cc100f26bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  fireball: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+  projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+  playerStatus: {fileID: 0}
 --- !u!58 &1998970166
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2579,3 +2686,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1998970168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1d2cd14f8e5479fe9f55a4e75b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  face_direction: 0
+--- !u!114 &1998970169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d65947e78f313428dba0c68a06963f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &1998970170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163956ca5854f2144b59518152b5c3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatus: {fileID: 0}

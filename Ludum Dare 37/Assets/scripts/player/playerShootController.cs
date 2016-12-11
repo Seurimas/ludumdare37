@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerEnhancedShootController : MonoBehaviour {
+public class playerShootController : MonoBehaviour {
     public GameObject projectile;
     private GameObject missile;
     private playerStatusController playerStatus;

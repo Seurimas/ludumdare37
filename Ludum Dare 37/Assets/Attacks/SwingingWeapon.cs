@@ -7,8 +7,6 @@ public class SwingingWeapon : MonoBehaviour {
     public float targetAngle;
     public float duration;
     private float progress = 0;
-    public int weaponDamage;
-
     // Use this for initialization
     void Start () {
         transform.RotateAround(transform.parent.position, Vector3.back, getAngleAtTime(0));

@@ -19,9 +19,8 @@ public class AdventurerMovementController : MonoBehaviour {
         if (targetPosition != null)
         {
             Vector3 vector = (targetPosition.Value - transform.position);
-            if (vector.magnitude < 0.125f)
+            if (vector.magnitude < 0.5f)
             {
-                Debug.Log(string.Format("Reached {0}", nextWaypoint));
                 targetPosition = null;
                 if (nextWaypoint != null)
                     mind.OnReachWaypoint(nextWaypoint);
@@ -30,6 +29,10 @@ public class AdventurerMovementController : MonoBehaviour {
             {
                 Vector2 movement = vector.normalized * (speed);
                 rb2d.velocity = movement;
+                if (mind.state == AdventurerStateController.STATE.RETREATING)
+                    rb2d.mass = 10;
+                else
+                    rb2d.mass = 1;
             }
         } else
         {

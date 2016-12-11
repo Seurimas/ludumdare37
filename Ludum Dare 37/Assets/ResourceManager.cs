@@ -17,13 +17,19 @@ public class ResourceManager : MonoBehaviour {
     {
         if (goldText == null)
             return; // We're not active right now.
+        
+        goldText.text = string.Format(goldFormat, getGold());
+	}
+
+    public int getGold()
+    {
         float goldCount = 0;
-		foreach (GameObject loot in loots)
+        foreach (GameObject loot in loots)
         {
             goldCount += loot.GetComponent<LootZone>().gold;
         }
-        goldText.text = string.Format(goldFormat, (int) goldCount);
-	}
+        return (int)goldCount;
+    }
     public void initialize(List<GameObject> loots)
     {
         this.loots = loots;

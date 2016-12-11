@@ -5,29 +5,28 @@ using UnityEditor;
 using UnityEngine;
 
 public class AdventurerAttackController : MonoBehaviour {
-    private AdventurerStateController mind;
-    private AdventurerMovementController legs;
-    public ScriptableObject attackScript;
+    public AdventurerStateController mind;
+    public AdventurerMovementController legs;
     private AttackBehavior attack;
 	// Use this for initialization
 	void Start () {
         mind = GetComponent<AdventurerStateController>();
         legs = GetComponent<AdventurerMovementController>();
-        attack = attackScript as AttackBehavior;
+        attack = GetComponent<AttackBehavior>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        attack.update(gameObject);
+        attack.update(this);
 	}
 
     public void engage(GameObject aggro)
     {
-        attack.engage(gameObject, aggro);
+        attack.engage(this, aggro);
     }
 
-    public int getAttackDistance()
+    public float getAttackDistance()
     {
-        return attack.getAttackDistance(gameObject);
+        return attack.getAttackDistance(this);
     }
 }

@@ -22,15 +22,19 @@ public class AdventurerMovementController : MonoBehaviour {
             Vector3 vector = (targetPosition.Value - transform.position);
             if (vector.magnitude < speed * Time.deltaTime)
             {
+                Debug.Log(string.Format("Reached {0}", nextWaypoint));
                 targetPosition = null;
                 if (nextWaypoint != null)
                     mind.OnReachWaypoint(nextWaypoint);
             }
             else
             {
-                Vector2 movement = vector.normalized * (speed * Time.deltaTime);
-                rb2d.MovePosition(rb2d.position + movement);
+                Vector2 movement = vector.normalized * (speed);
+                rb2d.velocity = movement;
             }
+        } else
+        {
+            rb2d.velocity.Set(0, 0);
         }
 	}
 

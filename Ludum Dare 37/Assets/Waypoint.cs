@@ -7,7 +7,7 @@ public class Waypoint : MonoBehaviour {
     public List<Waypoint> adjacentWaypoints;
     private Dictionary<Waypoint, Waypoint> transitionWaypoint = new Dictionary<Waypoint, Waypoint>();
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         calculatePaths();
 	}
 

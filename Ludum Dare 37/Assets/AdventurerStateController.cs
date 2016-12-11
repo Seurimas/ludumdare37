@@ -64,7 +64,8 @@ public class AdventurerStateController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		switch (state)
+        float targetDistance = distanceToTarget();
+        switch (state)
         {
             case STATE.SPAWNED:
                 state = STATE.ADVANCING;
@@ -75,28 +76,32 @@ public class AdventurerStateController : MonoBehaviour {
                 lootForFrame(zone);
                 if (goldEarned > cashoutValue)
                 {
-                    Debug.Log("Done", this);
                     state = STATE.RETREATING;
                     move(door);
                 } else if (zone.gold == 0)
                 {
-                    Debug.Log("Next", this);
                     state = STATE.ADVANCING;
                     loot = LootZone.getRandomWithLoot().GetComponent<Waypoint>();
                     move(loot);
                 }
                 break;
-            case STATE.APPROACHING:
-                if (distanceToTarget() < fists.getAttackDistance())
-                {
-                    Debug.Log("Engaging!");
+            case STATE.ADVANCING:
+            case STATE.RETREATING:
+                if (targetDistance < fists.getAttackDistance())
                     engage(aggro);
+                break;
+            case STATE.APPROACHING:
+                if (targetDistance < fists.getAttackDistance())
+                {
+                    engage(aggro);
+                } else
+                {
+                    approach(aggro);
                 }
                 break;
             case STATE.ATTACKING:
-                if (distanceToTarget() > fists.getAttackDistance() + 1)
+                if (targetDistance > fists.getAttackDistance() + 1)
                 {
-                    Debug.Log("Approaching!");
                     approach(aggro);
                 }
                 break;
@@ -106,7 +111,8 @@ public class AdventurerStateController : MonoBehaviour {
     private void move(Waypoint targetWaypoint)
     {
         this.targetWaypoint = targetWaypoint;
-        legs.moveTo(Waypoint.getNearestTo(this.gameObject).getNextWaypointTo(targetWaypoint));
+        Waypoint source = Waypoint.getNearestTo(this.gameObject);
+        legs.moveTo(source.getNextWaypointTo(targetWaypoint));
     }
 
     private void approach(GameObject target)
@@ -122,6 +128,20 @@ public class AdventurerStateController : MonoBehaviour {
         fists.engage(target);
     }
 
+    public void disengage()
+    {
+        Debug.Log("Disengaging.");
+        if (goldEarned > cashoutValue)
+        {
+            state = STATE.RETREATING;
+            move(door);
+        } else
+        {
+            state = STATE.ADVANCING;
+            move(loot);
+        }
+    }
+
     internal void initialize(GameObject door, GameObject loot)
     {
         this.door = door.GetComponent<Waypoint>();
@@ -135,22 +155,14 @@ public class AdventurerStateController : MonoBehaviour {
 
     public void aggroPlayer(GameObject gameObject)
     {
-        switch (state)
-        {
-            case STATE.SPAWNED:
-            case STATE.ADVANCING:
-            case STATE.LOOTING:
-                aggro = gameObject;
-                if (distanceToTarget() > fists.getAttackDistance())
-                    approach(aggro);
-                else
-                    engage(aggro);
-                break;
-        }
+        aggro = gameObject;
     }
 
     public float distanceToTarget()
     {
-        return (aggro.transform.position - transform.position).magnitude;
+        if (aggro != null)
+            return (aggro.transform.position - transform.position).magnitude;
+        else
+            return Mathf.Infinity;
     }
 }

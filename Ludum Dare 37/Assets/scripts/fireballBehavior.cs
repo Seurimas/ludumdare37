@@ -41,7 +41,14 @@ public class fireballBehavior : MonoBehaviour {
         string name = collision.gameObject.name;
         if (collision.gameObject.tag == "Enemy")
         {
+            Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+
+        if(collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

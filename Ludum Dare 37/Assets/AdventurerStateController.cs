@@ -34,7 +34,6 @@ public class AdventurerStateController : MonoBehaviour {
 
     internal void OnReachWaypoint(Waypoint reached)
     {
-        Debug.Log(String.Format("{0} reached {1}", this, reached));
         if (reached == targetWaypoint)
         {
             switch (state)
@@ -72,12 +71,19 @@ public class AdventurerStateController : MonoBehaviour {
                 move(loot);
                 break;
             case STATE.LOOTING:
-                lootForFrame();
+                LootZone zone = loot.GetComponent<LootZone>();
+                lootForFrame(zone);
                 if (goldEarned > cashoutValue)
                 {
                     Debug.Log("Done", this);
                     state = STATE.RETREATING;
                     move(door);
+                } else if (zone.gold == 0)
+                {
+                    Debug.Log("Next", this);
+                    state = STATE.ADVANCING;
+                    loot = LootZone.getRandomWithLoot().GetComponent<Waypoint>();
+                    move(loot);
                 }
                 break;
             case STATE.APPROACHING:
@@ -122,9 +128,9 @@ public class AdventurerStateController : MonoBehaviour {
         this.loot = loot.GetComponent<Waypoint>();
     }
 
-    private void lootForFrame()
+    private void lootForFrame(LootZone zone)
     {
-        goldEarned += Time.deltaTime;
+        goldEarned += zone.loot(Time.deltaTime);
     }
 
     public void aggroPlayer(GameObject gameObject)

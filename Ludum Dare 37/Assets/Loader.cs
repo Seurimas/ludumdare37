@@ -15,6 +15,7 @@ public class Loader : MonoBehaviour {
         if (GameManager.instance == null)
             Instantiate(gameManager);
         GameManager.instance.adventurerManager.initialize(doors, loots);
+        GameManager.instance.resourceManager.initialize(loots);
         GameManager.instance.adventurerManager.initializeGUI(timerText, currentText);
         GameManager.instance.resourceManager.initializeGUI(goldText);
     }

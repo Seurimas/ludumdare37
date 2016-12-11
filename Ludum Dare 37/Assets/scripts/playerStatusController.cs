@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class playerStatusController : MonoBehaviour {
     public int face_direction;
-    public int health;
+    //public int health;
 	// Use this for initialization
 	void Start () {
         face_direction = 0;
-        health = 200;
+        //health = 200;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //getFaceDirection();
-        if (ImDeath())
-        {
-            Destroy(gameObject);
-        }
+        //if (ImDeath())
+        //{
+            //Destroy(gameObject);
+        //}
     }
 
     public int getFaceDirection()
@@ -45,25 +45,13 @@ public class playerStatusController : MonoBehaviour {
         return face_direction;
     }
 
-    private bool ImDeath() {
-
-        if (health <= 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Weapon")
-        {
+        //if (collision.gameObject.tag == "Weapon")
+        //{
             //health -= 10;
-            health -= collision.gameObject.GetComponent<SwingingWeapon>().weaponDamage;
-        }
+            //health -= collision.gameObject.GetComponent<SwingingWeapon>().weaponDamage;
+        //}
     }
 }

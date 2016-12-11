@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class healthTextController : MonoBehaviour {
     public Text healthText;
-    private string healthFormat;
-    public playerStatusController playerStatus;
+    public healthController healthController;
 	// Use this for initialization
 	void Start () {
-        playerStatus = this.GetComponent<playerStatusController>();
+        healthController = this.GetComponent<healthController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        healthText.text = "Player health: " + playerStatus.health.ToString();
+        healthText.text = "Player health: " + healthController.health.ToString();
 	}
 }

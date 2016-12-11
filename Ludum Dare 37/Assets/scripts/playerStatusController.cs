@@ -13,7 +13,11 @@ public class playerStatusController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        getFaceDirection();
+        //getFaceDirection();
+        if (ImDeath())
+        {
+            Destroy(gameObject);
+        }
     }
 
     public int getFaceDirection()
@@ -39,6 +43,19 @@ public class playerStatusController : MonoBehaviour {
         }
 
         return face_direction;
+    }
+
+    private bool ImDeath() {
+
+        if (health <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

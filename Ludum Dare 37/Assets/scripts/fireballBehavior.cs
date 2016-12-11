@@ -39,12 +39,9 @@ public class fireballBehavior : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string name = collision.gameObject.name;
-        if (name != "bahamut" && name != "fireball(Clone)"){
-            Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
             Destroy(collision.gameObject);
         }
-
-
-        
     }
 }

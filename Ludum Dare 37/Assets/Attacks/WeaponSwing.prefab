@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212739701588006534}
   - component: {fileID: 114969570327093230}
   - component: {fileID: 61939526531843912}
+  - component: {fileID: 114958324088596774}
   m_Layer: 0
   m_Name: WeaponSwing
   m_TagString: Weapon
@@ -56,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114958324088596774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975321907007740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9199a467a770af4a929226d25a6021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealt: 10
 --- !u!114 &114969570327093230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +83,6 @@ MonoBehaviour:
   swingAngle: 180
   targetAngle: 0
   duration: 0
-  weaponDamage: 17
 --- !u!212 &212739701588006534
 SpriteRenderer:
   m_ObjectHideFlags: 1

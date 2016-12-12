@@ -24,7 +24,7 @@ public class adventurerShootBehavior : AttackBehavior
     {
         Vector2 vectorToTarget = target.transform.position - transform.position;
         float angleToTarget = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Debug.Log(angleToTarget);
+        // 90 Because the sprite is rotated already.
         GameObject missile = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angleToTarget - 90, new Vector3(0, 0, 1)));
         missile.GetComponent<Rigidbody2D>().velocity = vectorToTarget.normalized * speed;
     }

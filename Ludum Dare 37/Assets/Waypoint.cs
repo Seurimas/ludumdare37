@@ -46,7 +46,16 @@ public class Waypoint : MonoBehaviour {
 
     public Waypoint getNextWaypointTo(Waypoint target)
     {
-        return transitionWaypoint[target];
+        if (!transitionWaypoint.ContainsKey(target))
+        {
+            Debug.Log(this);
+            Debug.Log(target);
+            Debug.Log(transitionWaypoint);
+            return this;
+        } else
+        {
+            return transitionWaypoint[target];
+        }
     }
 
     public void OnDrawGizmos()

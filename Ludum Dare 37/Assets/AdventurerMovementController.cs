@@ -58,4 +58,10 @@ public class AdventurerMovementController : MonoBehaviour {
     {
         targetPosition = null;
     }
+
+    public void OnDrawGizmos()
+    {
+        if (targetPosition != null)
+            Gizmos.DrawLine(transform.position, targetPosition.Value);
+    }
 }

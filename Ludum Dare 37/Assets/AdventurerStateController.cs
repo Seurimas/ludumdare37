@@ -95,6 +95,8 @@ public class AdventurerStateController : MonoBehaviour {
             case STATE.RETREATING:
                 if (targetDistance < fists.getAttackDistance())
                     engage(aggro);
+                else if (legs.targetPosition == null)
+                    move(targetWaypoint);
                 break;
             case STATE.APPROACHING:
                 if (targetDistance < fists.getAttackDistance())

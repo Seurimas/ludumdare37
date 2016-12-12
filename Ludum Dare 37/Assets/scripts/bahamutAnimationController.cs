@@ -15,7 +15,6 @@ public class bahamutAnimationController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerStatus.isIdle());
         animator.SetInteger("direction", playerStatus.getFaceDirection());
         if (playerStatus.isIdle())
         {

@@ -194,5 +194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adventurerPrefabs:
+  - {fileID: 1133487765144984, guid: 8845cdc3c6ba786438afc742aa3955a9, type: 2}
+  - {fileID: 1305324263954368, guid: f95bd5b73deed3b459240b43395bf20e, type: 2}
+  - {fileID: 1813904340717100, guid: 546d6aae420b7df44a43d23ddb4396a0, type: 2}
   - {fileID: 1846019831061736, guid: 161014779a04b5f408f2ef6963f9dd4e, type: 2}
+  - {fileID: 1933995045712536, guid: 8249f53d762141f45a9ad7a9c469d5a7, type: 2}
+  timerText: {fileID: 0}
+  currentText: {fileID: 0}
   waveGap: 5

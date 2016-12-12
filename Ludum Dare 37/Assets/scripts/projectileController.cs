@@ -17,7 +17,7 @@ public class projectileController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map" || collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Asset" || collision.gameObject.tag == "Map")
         {
             Destroy(gameObject);
         }

@@ -11,6 +11,7 @@ public class WeaponSwing : AttackBehavior
     public float disengageDistance = 7f;
     public float swingSize = 1f;
     public float swingDuration = 0.5f;
+    public float damageDealt;
     private GameObject target;
     private GameObject swingObject;
     private Rigidbody2D rb2d;
@@ -64,5 +65,6 @@ public class WeaponSwing : AttackBehavior
         swingObject.transform.position += new Vector3(0, 1);
         swingObject.GetComponent<SwingingWeapon>().targetAngle = Mathf.Atan2(angle.x, angle.y) * Mathf.Rad2Deg;
         swingObject.GetComponent<SwingingWeapon>().duration = swingDuration;
+        swingObject.GetComponent<damageController>().damageDealt = damageDealt;
     }
 }

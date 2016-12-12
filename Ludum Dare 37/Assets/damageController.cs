@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class damageController : MonoBehaviour {
-    public int damageDealt;
+    public float damageDealt;
+    bool destroyOnCollide = false;
     // Use this for initialization
     void Start () {
 		
@@ -20,7 +21,11 @@ public class damageController : MonoBehaviour {
         if (healthController != null)
         {
             if (TeamController.areDifferentTeam(gameObject, collision.gameObject))
+            {
                 healthController.health -= damageDealt;
+                if (destroyOnCollide)
+                    Destroy(gameObject);
+            }
         }
     }
 }

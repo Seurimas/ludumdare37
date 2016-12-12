@@ -22,5 +22,9 @@ public class playerMoveController : MonoBehaviour {
         {
             rb2D.velocity = new Vector2(0, y * speed);
         }
+        if (x == 0 && y == 0)
+        {
+            rb2D.velocity = new Vector2(0, 0);
+        }
     }
 }

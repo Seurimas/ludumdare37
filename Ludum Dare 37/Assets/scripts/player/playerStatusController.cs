@@ -38,4 +38,15 @@ public class playerStatusController : MonoBehaviour {
 
         return face_direction;
     }
+
+    public bool isIdle() {
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }

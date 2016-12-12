@@ -4,6 +4,7 @@ public class PlayerBurstController : MonoBehaviour {
     public SkillController skillButton;
     private playerMoveController move;
     private bool boosted = false;
+    public float burstAmount = 5;
     private float timeSinceBoost = 0;
     public float duration = 4;
     // Use this for initialization
@@ -27,11 +28,11 @@ public class PlayerBurstController : MonoBehaviour {
     {
         timeSinceBoost = 0;
         boosted = true;
-        move.speed += 5;
+        move.speed += burstAmount;
     }
     private void endBoost()
     {
         boosted = false;
-        move.speed -= 5;
+        move.speed -= burstAmount;
     }
 }

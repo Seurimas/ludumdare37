@@ -18,4 +18,10 @@ public class TeamController : MonoBehaviour {
 	void Update () {
 		
 	}
+    public static bool areDifferentTeam(GameObject first, GameObject second)
+    {
+        TeamController otherTeam = first.GetComponent<TeamController>();
+        TeamController myTeam = second.GetComponent<TeamController>();
+        return (otherTeam == null || myTeam == null || myTeam.team != otherTeam.team);
+    }
 }

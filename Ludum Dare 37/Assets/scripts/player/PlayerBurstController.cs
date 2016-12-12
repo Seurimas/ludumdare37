@@ -20,8 +20,12 @@ public class PlayerBurstController : MonoBehaviour {
             skillButton.startCooldown();
         } else if (timeSinceBoost > duration && boosted)
         {
-            
+            endBoost();
+        } else if (timeSinceBoost < duration && boosted)
+        {
+            timeSinceBoost += Time.deltaTime;
         }
+
 	}
 
     private void speedBoost()

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114382688347480520}
   - component: {fileID: 114346433436133512}
   - component: {fileID: 114319883256557518}
+  - component: {fileID: 114816436791224366}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Enemy
@@ -181,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  nextWaypoint: {fileID: 0}
 --- !u!114 &114382688347480520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,6 +214,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mind: {fileID: 0}
   legs: {fileID: 0}
+--- !u!114 &114816436791224366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad4ec1fad12f8a42b045f3fceece331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 32
 --- !u!114 &114994536185691510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f449d9a23e9e6d4aac45bd1dd7d542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   door: {fileID: 0}
   loot: {fileID: 0}
   cashoutValue: 2

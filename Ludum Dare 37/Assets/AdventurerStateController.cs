@@ -12,7 +12,7 @@ public class AdventurerStateController : MonoBehaviour {
         HEALING,
         FLANKING
     };
-    public STATE state { get; private set; }
+    public STATE state;
     public Waypoint door;
     private Waypoint targetWaypoint;
     private GameObject aggro;

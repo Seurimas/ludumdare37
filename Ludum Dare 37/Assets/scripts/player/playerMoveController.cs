@@ -11,9 +11,16 @@ public class playerMoveController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        rb2D.velocity = new Vector2(x * speed, y * speed);
+        if (x != 0)
+        {
+            rb2D.velocity = new Vector2(x * speed, 0);
+        }
+        if (y != 0)
+        {
+            rb2D.velocity = new Vector2(0, y * speed);
+        }
     }
 }

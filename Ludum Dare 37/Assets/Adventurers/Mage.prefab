@@ -233,7 +233,7 @@ MonoBehaviour:
   sprite: {fileID: 21300010, guid: 068a1f2a934f4214b8aedf44ece95c47, type: 3}
   engageDistance: 2
   disengageDistance: 5
-  swingSize: 1
+  swingSize: 2
   swingDuration: 0.6
   damageDealt: 10
 --- !u!212 &212397432014148134

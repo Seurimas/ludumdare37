@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114628336338911886}
   - component: {fileID: 114909274571096382}
   m_Layer: 0
-  m_Name: weak fireball
+  m_Name: green fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

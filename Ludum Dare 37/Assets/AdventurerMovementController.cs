@@ -5,8 +5,8 @@ using UnityEngine;
 public class AdventurerMovementController : MonoBehaviour {
     public float speed = 10f;
     private AdventurerStateController mind;
-    private Vector3? targetPosition;
-    private Waypoint nextWaypoint;
+    public Vector3? targetPosition;
+    public Waypoint nextWaypoint;
     private Rigidbody2D rb2d;
 	// Use this for initialization
 	void Start () {
@@ -19,7 +19,7 @@ public class AdventurerMovementController : MonoBehaviour {
         if (targetPosition != null)
         {
             Vector3 vector = (targetPosition.Value - transform.position);
-            if (vector.magnitude < 0.5f)
+            if (vector.magnitude < 1f)
             {
                 targetPosition = null;
                 if (nextWaypoint != null)

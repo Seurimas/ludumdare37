@@ -28,7 +28,7 @@ public class LootZone : MonoBehaviour {
         if (gold > amount)
         {
             gold -= amount;
-            if (lastGold - gold > 1)
+            if (lastGold - gold >= 1)
             {
                 playNoise();
                 lastGold -= 1;

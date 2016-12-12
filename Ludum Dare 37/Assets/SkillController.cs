@@ -30,7 +30,7 @@ public class SkillController : MonoBehaviour {
 
     public void OnGUI()
     {
-        if (timeSinceLast < cooldown)
+        if (onCooldown())
         {
             float percent = timeSinceLast / cooldown;
             float fillHeight = rect.height * (1 - percent);
@@ -39,5 +39,14 @@ public class SkillController : MonoBehaviour {
         {
             UnityEngine.GUI.Label(new Rect(rect.x, rect.y - rect.height - 8, 16, 24), key.ToString());
         }
+    }
+
+    public void startCooldown()
+    {
+        timeSinceLast = 0;
+    }
+    public bool onCooldown()
+    {
+        return timeSinceLast < cooldown;
     }
 }

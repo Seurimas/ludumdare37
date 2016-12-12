@@ -410,6 +410,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224448810845748508, guid: 2634a204f68dd0d4581546f1199c9f0b,
     type: 2}
   m_PrefabInternal: {fileID: 411136106}
+--- !u!114 &304817594 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114533246210680820, guid: 2634a204f68dd0d4581546f1199c9f0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 411136106}
+  m_Script: {fileID: 11500000, guid: a7a505a2a61f30e43b4fc34cd9e28a0d, type: 3}
 --- !u!1 &351015565
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,11 +684,6 @@ Prefab:
       propertyPath: bahamut
       value: 
       objectReference: {fileID: 1998970161}
-    - target: {fileID: 114533246210680820, guid: 2634a204f68dd0d4581546f1199c9f0b,
-        type: 2}
-      propertyPath: key
-      value: 113
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2634a204f68dd0d4581546f1199c9f0b, type: 2}
   m_IsPrefabParent: 0
@@ -3059,6 +3060,8 @@ GameObject:
   - component: {fileID: 1998970171}
   - component: {fileID: 1998970172}
   - component: {fileID: 1998970173}
+  - component: {fileID: 1998970165}
+  - component: {fileID: 1998970174}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -3131,6 +3134,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998970165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48cdc1c4d5d3b449b810c4a0b24318c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillButton: {fileID: 304817594}
+  projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
 --- !u!58 &1998970166
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3236,6 +3252,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+--- !u!114 &1998970174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d813aee8af34784409e0a10172b052d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
 --- !u!1 &2139008729
 GameObject:
   m_ObjectHideFlags: 0

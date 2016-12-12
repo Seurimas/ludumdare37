@@ -189,11 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  disengageDistance: 10
-  engageDistance: 7
+  disengageDistance: 7
+  engageDistance: 5
   shootDistance: 5
-  interval: 3
-  projectile: {fileID: 1939746867939760, guid: 4d51ce928bba7ea4c8cdc1537dce16c4, type: 2}
+  interval: 2
+  projectile: {fileID: 1341425900058568, guid: 5afecd34e27173d4fa6c44c0b6636e46, type: 2}
 --- !u!114 &114872949451879544
 MonoBehaviour:
   m_ObjectHideFlags: 1

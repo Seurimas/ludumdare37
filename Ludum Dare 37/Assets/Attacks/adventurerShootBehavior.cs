@@ -6,8 +6,8 @@ using UnityEngine;
 public class adventurerShootBehavior : AttackBehavior
 {
     public int speed;
-    public float disengageDistance = 10f;
-    public float engageDistance = 7f;
+    public float disengageDistance = 7f;
+    public float engageDistance = 5f;
     public float shootDistance = 5f;
     public float interval = 3f;
     private float sinceLast = 0;

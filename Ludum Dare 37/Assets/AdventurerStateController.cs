@@ -174,7 +174,7 @@ public class AdventurerStateController : MonoBehaviour {
 
     public void OnDestroy()
     {
-        if (goldEarned >= 0)
+        if (goldEarned >= 0 && loot != null)
             loot.GetComponent<LootZone>().accrue(goldEarned + Random.Range(0, 0.5f));
     }
 }

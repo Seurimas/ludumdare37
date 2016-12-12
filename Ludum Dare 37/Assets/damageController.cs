@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class damageController : MonoBehaviour {
     public float damageDealt;
-    bool destroyOnCollide = false;
+    public bool destroyOnCollide = false;
     // Use this for initialization
     void Start () {
 		

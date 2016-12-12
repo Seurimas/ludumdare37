@@ -166,7 +166,7 @@ MonoBehaviour:
   state: 0
   door: {fileID: 0}
   loot: {fileID: 0}
-  cashoutValue: 2
+  cashoutValue: 4
 --- !u!114 &114597740800724066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4148b9aae9dd44e80380c17abefc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 7
   nextWaypoint: {fileID: 0}
 --- !u!114 &114767578814522648
 MonoBehaviour:
@@ -231,9 +231,9 @@ MonoBehaviour:
   swingingWeaponPrefab: {fileID: 1975321907007740, guid: f014d189428646d4ea8e97bb792a9324,
     type: 2}
   sprite: {fileID: 21300010, guid: 068a1f2a934f4214b8aedf44ece95c47, type: 3}
-  engageDistance: 3
-  disengageDistance: 7
-  swingSize: 2
+  engageDistance: 2
+  disengageDistance: 5
+  swingSize: 1
   swingDuration: 0.6
   damageDealt: 10
 --- !u!212 &212397432014148134

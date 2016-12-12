@@ -54,7 +54,6 @@ public class Waypoint : MonoBehaviour {
         foreach (Waypoint other in adjacentWaypoints)
         {
             Gizmos.DrawLine(transform.position, other.transform.position);
-            Gizmos.DrawWireSphere(transform.position, 5);
         }
     }
 

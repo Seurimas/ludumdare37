@@ -499,7 +499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1486472670638544, guid: 2634a204f68dd0d4581546f1199c9f0b, type: 2}
       propertyPath: m_Name
-      value: SkillButton (1)
+      value: SpeedButton
       objectReference: {fileID: 0}
     - target: {fileID: 114541222273194524, guid: 2634a204f68dd0d4581546f1199c9f0b,
         type: 2}

@@ -7,10 +7,12 @@ public class AdventurerManager : MonoBehaviour {
     public List<GameObject> adventurerPrefabs;
     private List<GameObject> doors;
     private List<GameObject> loots;
+    public int waveCount;
     public Text timerText, currentText;
     private string timerFormat, currentFormat;
     public void initialize(List<GameObject> doors, List<GameObject> loots)
     {
+        waveCount = 0;
         this.doors = doors;
         this.loots = loots;
     }
@@ -35,16 +37,17 @@ public class AdventurerManager : MonoBehaviour {
         if (adventurersLeft > 0)
         {
             waveProgress = 0;
-            timerText.text = "";
+            timerText.text = string.Format(timerFormat, waveCount, (int)(waveGap - waveProgress));
             currentText.text = string.Format(currentFormat, adventurersLeft);
         } else
         {
             waveProgress += Time.deltaTime;
             if (waveProgress > waveGap)
             {
+                waveCount++;
                 spawnRandomAdventurerGroup();
             }
-            timerText.text = string.Format(timerFormat, (int)(waveGap - waveProgress));
+            timerText.text = string.Format(timerFormat, waveCount, (int)(waveGap - waveProgress));
             currentText.text = "";
         }
 	}

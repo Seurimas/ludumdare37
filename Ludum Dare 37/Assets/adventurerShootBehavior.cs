@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class adventurerShootBehavior : MonoBehaviour {
+    public int speed;
     public GameObject projectile;
     private GameObject missile;
     GameObject target;
@@ -20,7 +21,7 @@ public class adventurerShootBehavior : MonoBehaviour {
     private void shoot()
     {
         missile = Instantiate(projectile, new Vector3(0, -1.75f) + transform.position, Quaternion.AngleAxis(180, new Vector3(0, 0, 1)));
-        missile.GetComponent<Rigidbody2D>().velocity = (target.transform.position) / Vector3.Distance(transform.position,target.transform.position) * missile.GetComponent<projectileController>().speed;
+        missile.GetComponent<Rigidbody2D>().velocity = (target.transform.position) / Vector3.Distance(transform.position,target.transform.position) * speed;
     }
 
 }

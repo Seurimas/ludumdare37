@@ -935,7 +935,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3363,6 +3363,7 @@ GameObject:
   - component: {fileID: 1998970175}
   - component: {fileID: 1998970176}
   - component: {fileID: 1998970177}
+  - component: {fileID: 1998970178}
   m_Layer: 0
   m_Name: bahamut
   m_TagString: Player
@@ -3607,6 +3608,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillButton: {fileID: 1581336049}
   healAmount: 50
+--- !u!114 &1998970178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998970161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad4ec1fad12f8a42b045f3fceece331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 128
+  height: 4
 --- !u!1001 &2056227756
 Prefab:
   m_ObjectHideFlags: 0

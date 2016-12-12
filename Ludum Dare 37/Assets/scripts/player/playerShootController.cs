@@ -10,6 +10,8 @@ public class playerShootController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerStatus = this.GetComponent<playerStatusController>();
+        projectile.GetComponent<projectileController>().scale = 1;
+        projectile.GetComponent<damageController>().damageDealt = 15;
     }
 	
 	// Update is called once per frame
@@ -23,6 +25,13 @@ public class playerShootController : MonoBehaviour {
         if (Input.GetKeyDown("space"))
         {
             shoot();
+        }
+
+        if (Input.GetKeyDown("m"))
+        {
+            Debug.Log(projectile.GetComponent<projectileController>().scale);
+            projectile.GetComponent<projectileController>().scale += 1;
+            projectile.GetComponent<damageController>().damageDealt *= 2;
         }
     }
 

@@ -18,6 +18,9 @@ public class damageController : MonoBehaviour {
     {
         healthController healthController = collision.gameObject.GetComponent<healthController>();
         if (healthController != null)
-            healthController.health -= damageDealt;
+        {
+            if (TeamController.areDifferentTeam(gameObject, collision.gameObject))
+                healthController.health -= damageDealt;
+        }
     }
 }

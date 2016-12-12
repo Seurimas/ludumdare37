@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -15,6 +16,10 @@ public class GameManager : MonoBehaviour {
     private bool gameActive = false;
     private float gameEndDuration = 5f;
     private float gameEndProgress = 0;
+    public Text gameOverText;
+    public string gameOverFormat;
+    private int mostGold;
+    private int highScore;
 
     public void setDragon(GameObject dragon)
     {
@@ -26,6 +31,14 @@ public class GameManager : MonoBehaviour {
         musicSource.loop = true;
         musicSource.clip = mainTheme;
         musicSource.Play();
+    }
+
+    public void initializeGUI(Text gameOver)
+    {
+        mostGold = 0;
+        gameOverText = gameOver;
+        gameOverFormat = gameOverText.text;
+        gameOverText.text = "";
     }
 
     // Use this for initialization
@@ -44,6 +57,13 @@ public class GameManager : MonoBehaviour {
 	void Start () {
     }
 	void Update () {
+        int gold = resourceManager.getGold();
+        if (gold > mostGold)
+        {
+            mostGold = gold;
+            if (mostGold > highScore)
+                highScore = mostGold;
+        }
         if (gameActive && bahamut == null)
         {
             loseGame();
@@ -63,6 +83,7 @@ public class GameManager : MonoBehaviour {
 
     public void loseGame()
     {
+        gameOverText.text = string.Format(gameOverFormat, mostGold, highScore);
         gameActive = false;
         gameEndProgress = 0;
         musicSource.Stop();

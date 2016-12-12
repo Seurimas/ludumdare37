@@ -3446,7 +3446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48cdc1c4d5d3b449b810c4a0b24318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
   skillButton: {fileID: 304817594}
   projectile: {fileID: 1064176878552178, guid: 5ad2ddbc6ab33034db3c9787665cb54e, type: 2}
 --- !u!58 &1998970166
@@ -3554,7 +3553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1766579514505878, guid: fe53038b063179645b2965b15d4fe71d, type: 2}
+<<<<<<< HEAD
   speed: 15
+=======
 --- !u!114 &1998970174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3906,3 +3907,4 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2139008729}
+>>>>>>> aa6dc9ef8d1987ba6ed7637f1751fe5bf17f9c13

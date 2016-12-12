@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class projectileController : MonoBehaviour {
-    public int speed;
     public Rigidbody2D rb2d;
 	// Use this for initialization
 	void Start () {
@@ -13,8 +12,8 @@ public class projectileController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(transform.gameObject.name);
-	}
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

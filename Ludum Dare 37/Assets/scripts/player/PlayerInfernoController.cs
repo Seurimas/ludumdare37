@@ -14,17 +14,18 @@ public class PlayerInfernoController : MonoBehaviour {
 		if (!skillButton.onCooldown() && Input.GetKeyDown(skillButton.key))
         {
             fireInferno();
+            skillButton.startCooldown();
         }
 	}
 
     private void fireInferno()
     {
+        int size = 8;
         float baseAngle = status.getFaceDirection() * 90 + 180;
-        for (int i = 0; i < 8;i++) {
-            float angle = baseAngle + Random.Range(-45, 45);
+        for (int i = 0; i < size; i++) {
+            float angle = baseAngle + (90f / size) * i - 45f;
             GameObject missile = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angle, new Vector3(0, 0, 1)));
             missile.GetComponent<Rigidbody2D>().velocity = missile.transform.rotation * new Vector2(0, missile.GetComponent<projectileController>().speed);
         }
-        skillButton.startCooldown();
     }
 }

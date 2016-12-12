@@ -12,7 +12,7 @@ public class SkillController : MonoBehaviour {
     private Texture2D texture;
 	// Use this for initialization
 	void Start () {
-        timeSinceLast = 0;
+        timeSinceLast = cooldown;
         RectTransform buttonTransform = GetComponent<RectTransform>();
         Vector3[] corners = new Vector3[4];
         buttonTransform.GetWorldCorners(corners);

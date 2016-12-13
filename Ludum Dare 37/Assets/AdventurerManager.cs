@@ -59,7 +59,9 @@ public class AdventurerManager : MonoBehaviour {
 
     public void spawnRandomAdventurerGroup()
     {
-        spawnAdventurerGroup(doors[Random.Range(0, doors.Count)], loots[Random.Range(0, loots.Count)], Random.Range(3, 6));
+        int min = 3 + Mathf.Min(waveCount / 5, 3);
+        int max = 4 + Mathf.Min(waveCount / 3, 6);
+        spawnAdventurerGroup(doors[Random.Range(0, doors.Count)], loots[Random.Range(0, loots.Count)], Random.Range(min, max));
     }
 
     private void spawnAdventurerGroup(GameObject door, GameObject loot, int groupSize)
@@ -77,6 +79,28 @@ public class AdventurerManager : MonoBehaviour {
         GameObject prefab = adventurerPrefabs[Random.Range(0, adventurerPrefabs.Count)];
         GameObject adventurer = Instantiate(prefab, spawnLocation, new Quaternion());
         adventurer.GetComponent<AdventurerStateController>().initialize(door, loot);
+        if (waveCount > 5 && Random.value > 0.5f)
+        {
+            adventurer.GetComponent<AdventurerStateController>().cashoutValue += 1f;
+        }
+        if (waveCount > 5 && adventurer.GetComponent<WeaponSwing>() != null)
+        {
+            adventurer.GetComponent<WeaponSwing>().damageDealt += Mathf.Min(Random.value * waveCount, 20);
+        }
+        if (waveCount > 5 && adventurer.GetComponent<HitAndRun>() != null)
+        {
+            HitAndRun hitAndRun = adventurer.GetComponent<HitAndRun>();
+            hitAndRun.cooldown = Mathf.Max(hitAndRun.cooldown - Random.value * waveCount / 3, 1);
+        }
+        if (waveCount > 5 && adventurer.GetComponent<adventurerShootBehavior>() != null)
+        {
+            adventurerShootBehavior shoot = adventurer.GetComponent<adventurerShootBehavior>();
+            shoot.interval = shoot.interval / Mathf.Min(Mathf.Max(1, Random.value * waveCount / 3), 4);
+        }
+        if (waveCount > 10 && adventurer.GetComponent<healthController>() != null)
+        {
+            adventurer.GetComponent<healthController>().health += waveCount * Random.value;
+        }
     }
 
 }

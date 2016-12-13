@@ -19,6 +19,8 @@ public class CameraController : MonoBehaviour {
     void deadzone_check()
     {
         //MAGIC NUMBERS!
+        if (player == null)
+            return;
         float speed = player.GetComponent<playerMoveController>().speed;
         float deltaX = 0.0f;
         float deltaY = 0.0f;

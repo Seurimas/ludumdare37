@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class Netted : MonoBehaviour
 {
+    private float amount = 5;
     public float duration = 3f;
     private float progress = 0;
     private playerMoveController move;
     void Start()
     {
         move = GetComponent<playerMoveController>();
-        if (move.speed > 5)
-            move.speed -= 4;
+        if (move.speed > amount + 1)
+            move.speed -= amount;
         else
             Destroy(this);
     }
@@ -22,7 +23,7 @@ public class Netted : MonoBehaviour
         progress += Time.deltaTime;
         if (progress > duration)
         {
-            GetComponent<playerMoveController>().speed += 4;
+            GetComponent<playerMoveController>().speed += amount;
             Destroy(this);
         }
     }

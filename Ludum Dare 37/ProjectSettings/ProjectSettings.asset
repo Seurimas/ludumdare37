@@ -120,7 +120,12 @@ PlayerSettings:
     Others: 1
   bundleIdentifier: com.Company.ProductName
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 21300002, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300004, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300006, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300008, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
+  - {fileID: 21300010, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0

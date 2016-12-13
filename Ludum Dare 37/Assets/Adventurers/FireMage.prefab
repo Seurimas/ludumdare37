@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: {fileID: 1047952276765894, guid: d747d2db5eadf89428efe185a7f69cb1, type: 2}
+  chance: 0.2
 --- !u!114 &114340879821521134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -276,7 +277,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -349921047
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 2dc20a4c2180c514589e81bdca2ea0ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

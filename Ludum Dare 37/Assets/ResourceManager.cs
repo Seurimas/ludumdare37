@@ -26,7 +26,8 @@ public class ResourceManager : MonoBehaviour {
         float goldCount = 0;
         foreach (GameObject loot in loots)
         {
-            goldCount += loot.GetComponent<LootZone>().gold;
+            if (loot != null)
+                goldCount += loot.GetComponent<LootZone>().gold;
         }
         return (int)goldCount;
     }

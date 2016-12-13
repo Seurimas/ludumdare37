@@ -50,9 +50,6 @@ public class CameraController : MonoBehaviour {
             moveTemp.z = -10.0f;
             transform.position = Vector3.MoveTowards(transform.position, moveTemp, speed * Time.deltaTime);
         }
-        Debug.Log(transform.position);
-        Debug.Log("deltaX: " + deltaX);
-        Debug.Log("deltaY: " + deltaY);
     }
 
 }

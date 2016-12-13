@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114891240342090152}
   - component: {fileID: 114787831980246848}
   - component: {fileID: 114876801221227244}
+  - component: {fileID: 114300786210710442}
   m_Layer: 0
   m_Name: FireMage
   m_TagString: Enemy
@@ -155,6 +156,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &114300786210710442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813904340717100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86680a47a7361904d8cff8a05040d4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1047952276765894, guid: d747d2db5eadf89428efe185a7f69cb1, type: 2}
 --- !u!114 &114340879821521134
 MonoBehaviour:
   m_ObjectHideFlags: 1

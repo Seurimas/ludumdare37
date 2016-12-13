@@ -14,7 +14,7 @@ public class healthController : MonoBehaviour {
         AmIDead();
 	}
 
-    private bool AmIDead()
+    public bool AmIDead()
     {
 
         if (health <= 0)

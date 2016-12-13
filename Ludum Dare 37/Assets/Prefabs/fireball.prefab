@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1364002a6f2b2d44c8686aec56957037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 1
+  scale: 2
+  maxScale: 3
 --- !u!114 &114346619527428272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9199a467a770af4a929226d25a6021a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealt: 960
+  damageDealt: 491520
   destroyOnCollide: 1
 --- !u!114 &114706293443598560
 MonoBehaviour:

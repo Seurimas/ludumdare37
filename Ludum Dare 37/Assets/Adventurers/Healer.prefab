@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114346579548020294}
   - component: {fileID: 114837462414519386}
   - component: {fileID: 114853286324881298}
+  - component: {fileID: 114291012431668752}
   m_Layer: 0
   m_Name: Healer
   m_TagString: Enemy
@@ -139,6 +140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b5f01288943c94bba1968a5f6fae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114291012431668752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305324263954368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86680a47a7361904d8cff8a05040d4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1433750728861684, guid: d6f161ea9e6b53143b0450d962ca5a6a, type: 2}
+  chance: 0.2
 --- !u!114 &114346579548020294
 MonoBehaviour:
   m_ObjectHideFlags: 1

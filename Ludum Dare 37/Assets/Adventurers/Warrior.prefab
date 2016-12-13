@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114346433436133512}
   - component: {fileID: 114319883256557518}
   - component: {fileID: 114816436791224366}
+  - component: {fileID: 114455042851341116}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Enemy
@@ -197,6 +198,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mind: {fileID: 0}
   legs: {fileID: 0}
+--- !u!114 &114455042851341116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846019831061736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86680a47a7361904d8cff8a05040d4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1564426954960906, guid: fba7c6060c497b24ca94cea5cb26c3fe, type: 2}
+  chance: 0.1
 --- !u!114 &114816436791224366
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,7 @@ using UnityEngine;
 public class LootDropController : MonoBehaviour {
     Vector3 position;
     public GameObject loot;
+    public float chance = 0.2f;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,9 +15,9 @@ public class LootDropController : MonoBehaviour {
 	void Update () {
     }
 
-    private void DropLoot()
+    private void OnDisable()
     {
-        if (GetComponent<healthController>().AmIDead())
+        if (GetComponent<healthController>().AmIDead() && Random.value < chance)
         {
             position = transform.position;
             Instantiate(loot, position, Quaternion.identity);

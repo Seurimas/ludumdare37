@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,5 +40,13 @@ public class ResourceManager : MonoBehaviour {
     {
         goldText = gold;
         goldFormat = gold.text;
+    }
+
+    internal void accrue(float v)
+    {
+        foreach (GameObject loot in loots)
+        {
+            loot.GetComponent<LootZone>().gold += v / loots.Count;
+        }
     }
 }

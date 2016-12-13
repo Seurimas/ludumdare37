@@ -34,7 +34,10 @@ public class powerupController : MonoBehaviour {
                 gameObject.GetComponent<playerShootController>().projectile.GetComponent<damageController>().damageDealt *= 2;
                 break;
             case 1:
-                
+                GameManager.instance.resourceManager.accrue(Random.Range(1, 2.5f));
+                break;
+            case 2:
+                gameObject.GetComponent<healthController>().health += Random.Range(10, 25);
                 break;
         }
     }

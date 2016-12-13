@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class scaleController : MonoBehaviour {
-    public int scale;
-    public int maxScale;
+    public float scale;
+    public float maxScale;
     // Use this for initialization
     void Start()
     {
-
+        ScaleControl();
     }
 	// Update is called once per frame
 	void Update () {

@@ -30,8 +30,8 @@ public class powerupController : MonoBehaviour {
         switch (type)
         {
             case 0:
-                gameObject.GetComponent<playerShootController>().projectile.GetComponent<scaleController>().scale += 1;
-                gameObject.GetComponent<playerShootController>().projectile.GetComponent<damageController>().damageDealt *= 2;
+                gameObject.GetComponent<playerShootController>().projectile.GetComponent<scaleController>().scale += 0.1f;
+                gameObject.GetComponent<playerShootController>().projectile.GetComponent<damageController>().damageDealt *= 1.1f;
                 break;
             case 1:
                 GameManager.instance.resourceManager.accrue(Random.Range(1, 2.5f));
